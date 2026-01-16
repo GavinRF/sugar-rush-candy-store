@@ -1,11 +1,57 @@
 ---
-title: "Contact"
-logo: "/img/logo.svg"
+title: Contact
+logo: img/sugar-rush.jpg
 contact_entries:
   - heading: Location
-    text: "3153 Lynn Avenue, South San Francisco, California 94080"
+    text: 10030 Main Street Bothell, Washington, United States
   - heading: Working hours
-    text: "Monday – Saturday: 9AM – 7PM We’re closed on Sundays"
+    text: "Mon
+
+      Closed
+
+      \t
+
+
+      Tue
+
+      11:00 am – 07:00 pm
+
+      \t
+
+
+      Wed
+
+      11:00 am – 07:00 pm
+
+      \t
+
+
+      Thu
+
+      11:00 am – 07:00 pm
+
+      \t
+
+
+      Fri
+
+      11:00 am – 08:00 pm
+
+      \t
+
+
+      Sat
+
+      10:00 am – 08:00 pm
+
+      \t
+
+
+      Sun
+
+      11:00 am – 05:00 pm
+
+      \t"
 ---
 
 We’d love to get in touch with you and hear your ideas and
