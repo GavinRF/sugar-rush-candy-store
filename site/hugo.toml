@@ -5,4 +5,4 @@ title = "Sugar Rush Candy Store"
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
-images = ["img/og-image.jpg"]
+images = ["img/gumdrop-2.jpg"]
