@@ -4,10 +4,10 @@ image: img/img_3759.jpg
 values:
   - heading: Nostalgic favorites
     text: >
-      Remember the candy you loved as a kid? We specialize in bringing back those
-      sweet memories. From classic penny candies to discontinued favorites, we hunt
-      down the treats that transport you back to simpler times. Every visit to Sugar
-      Rush is a trip down memory lane.
+      Remember the candy you loved as a kid? We specialize in bringing back
+      those sweet memories. From classic penny candies to discontinued
+      favorites, we hunt down the treats that transport you back to simpler
+      times. Every visit to Sugar Rush is a trip down memory lane.
     imageUrl: img/img_3745.jpg
   - heading: Quality ingredients
     text: >
@@ -25,9 +25,10 @@ values:
     imageUrl: img/img_3767.jpg
   - heading: Small batch makers
     text: >
-      We partner with artisan candy makers who craft their sweets in small batches
-      with care and attention. By supporting these independent confectioners, we
-      bring you unique flavors and quality you won't find in mass-produced treats.
+      We partner with artisan candy makers who craft their sweets in small
+      batches with care and attention. By supporting these independent
+      confectioners, we bring you unique flavors and quality you won't find in
+      mass-produced treats.
     imageUrl: /img/about-direct-sourcing.jpg
   - heading: Sweet experiences
     text: >
@@ -35,5 +36,5 @@ values:
       picking out a treat for yourself, building a gift box for someone special,
       or exploring new flavors from around the world, we're here to make every
       visit memorable and fun.
-    imageUrl: /img/about-reinvest-profits.jpg
+    imageUrl: img/screenshot-2026-01-08-at-11-56-18-instagram.png
 ---
