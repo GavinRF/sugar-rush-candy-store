@@ -24,5 +24,5 @@ values:
     believe in sharing that happiness with our community. We source treats from
     small batch candy makers and focus on quality over quantity, bringing you
     the sweetest experience possible.
-  image: img/home-about-section.jpg
+  image: img/gumdrop-and-lollipop.png
 ---
