@@ -9,42 +9,42 @@ contact_entries:
 
       Closed
 
-      \t
+      \t \n
 
 
       Tue
 
       11:00 am – 07:00 pm
 
-      \t
+      \t \n
 
 
       Wed
 
       11:00 am – 07:00 pm
 
-      \t
+      \t \n
 
 
       Thu
 
       11:00 am – 07:00 pm
 
-      \t
+      \t \n
 
 
       Fri
 
       11:00 am – 08:00 pm
 
-      \t
+      \t \n
 
 
       Sat
 
       10:00 am – 08:00 pm
 
-      \t
+      \t \n
 
 
       Sun
