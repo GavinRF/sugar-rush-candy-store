@@ -10,20 +10,18 @@ intro:
   text: a wide variety of confectionery goodness
 products:
   - image: img/gumdrop.png
-    text: We sell green and roasted coffee beans that are sourced directly from
-      independent farmers and farm cooperatives. We’re proud to offer a variety
-      of coffee beans grown with great care for the environment and local
-      communities. Check our post or contact us directly for current
-      availability.
+    text: We carry an incredible selection of nostalgic candies from your childhood
+      favorites to unique treats from around the world. From classic gummies and
+      chocolates to hard-to-find retro sweets, we've got something to satisfy
+      every sweet tooth. Stop by or contact us to see what's in stock.
   - image: img/gumdrop-eating-gumdrop.png
-    text: We offer a small, but carefully curated selection of brewing gear and
-      tools for every taste and experience level. No matter if you roast your
-      own beans or just bought your first french press, you’ll find a gadget to
-      fall in love with in our shop.
+    text: Looking for the perfect gift? We offer custom candy boxes and party favors
+      for every occasion. Whether it's a birthday, wedding, or just because,
+      we'll help you create a sweet surprise that will make anyone smile.
 values:
   heading: Our values
-  text: Coffee is an amazing part of human culture but it has a dark side too –
-    one of colonialism and mindless abuse of natural resources and human lives.
-    We want to turn this around and return the coffee trade to the drink’s
-    exhilarating, empowering and unifying nature.
+  text: Candy brings joy and sparks memories of simpler times. At Sugar Rush, we
+    believe in sharing that happiness with our community. We source treats from
+    small batch candy makers and focus on quality over quantity, bringing you
+    the sweetest experience possible.
 ---

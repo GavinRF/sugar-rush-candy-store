@@ -1,28 +1,31 @@
 ---
-title: 'Just in: small batch of Jamaican Blue Mountain in store next week'
+title: 'Just in: Limited edition retro candy collection arriving next week'
 date: 2017-01-04T15:04:10.000Z
 description: >-
-  We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
-  Mountain coffee beans in our store next week.
+  We're excited to announce a special shipment of hard-to-find nostalgic candies
+  hitting our shelves next week.
 ---
 
-We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
+We've tracked down a limited supply of some of the most requested retro candies from the 70s, 80s, and 90s. These treats will be available starting Tuesday, but quantities are limited so don't wait!
 
-Blue Mountain Peak is the highest mountain in Jamaica and one of the highest peaks in the Caribbean at 7,402 ft. It is the home of Blue Mountain coffee and their famous tours. It is located on the border of the Portland and Saint Thomas parishes of Jamaica.
+Our latest haul includes classics like Marathon Bars (now called Snickers in some countries), original recipe candy cigarettes, Astro Pops, and a variety of regional favorites that disappeared from store shelves decades ago.
 
-## A little history
+## Why nostalgic candy matters
 
-The Blue Mountains are considered by many to be a hiker's and camper's paradise. The traditional Blue Mountain trek is a 7-mile hike to the peak and consists of a 3,000-foot increase in elevation. Jamaicans prefer to reach the peak at sunrise, thus the 3–4 hour hike is usually undertaken in darkness. Since the sky is usually very clear in the mornings, Cuba can be seen in the distance.
+There's something magical about tasting a candy you haven't had since childhood. It's not just about the flavor - it's about the memories that come flooding back. That summer at your grandparents' house, the corner store after school, birthday parties with friends.
 
->Some of the plants found on the Blue Mountain cannot be found anywhere else in the world and they are often of a dwarfed sort.
+> The taste of a favorite childhood candy can transport you back in time more powerfully than any photograph.
 
-This is mainly due to the cold climate which inhibits growth. The small coffee farming communities of Claverty Cottage and Hagley Gap are located near the peak.
+We believe preserving these sweet traditions is important, which is why we work so hard to source discontinued and hard-to-find treats.
 
-## What you need to know before trying
+## What to expect
 
-Jamaican Blue Mountain Coffee or Jamaica Blue Mountain Coffee is a classification of coffee grown in the Blue Mountains of Jamaica. The best lots of Blue Mountain coffee are noted for their mild flavor and lack of bitterness. Over the past few decades, this coffee has developed a reputation that has made it one of the most expensive and sought-after coffees in the world. Over 80% of all Jamaican Blue Mountain Coffee is exported to Japan. In addition to its use for brewed coffee, the beans are the flavor base of Tia Maria coffee liqueur.
+This collection includes candies from several eras:
 
-Jamaican Blue Mountain Coffee is a globally protected certification mark, meaning only coffee certified by the Coffee Industry Board of Jamaica can be labeled as such. It comes from a recognized growing region in the Blue Mountain region of Jamaica, and its cultivation is monitored by the Coffee Industry Board of Jamaica.
+- **1970s classics**: Wax bottles, candy buttons on paper, and Chuckles
+- **1980s favorites**: Push Pops, Big League Chew, and Nerds in original packaging
+- **1990s gems**: Squeezit-style candies, Bubble Jug, and Wonder Balls
 
-The Blue Mountains are generally located between Kingston to the south and Port Antonio to the north. Rising 7,402 ft, they are some of the highest mountains in the Caribbean. The climate of the region is cool and misty with high rainfall. The soil is rich, with excellent drainage. This combination of climate and soil is considered ideal for coffee.
+Many of these items come from specialty suppliers who reproduce the original recipes, while others are genuine vintage stock from overseas markets where they're still produced.
 
+Stop by early next week to grab your favorites before they're gone. We can't guarantee when we'll be able to get another shipment like this!

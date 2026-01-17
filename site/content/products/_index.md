@@ -4,87 +4,83 @@ type: products
 image: img/img_3588.jpg
 intro:
   heading: What we offer
-  description: Sugar Rush is the ultimate spot for candy lovers who want to learn
-    about their sugar’s origin and support the farmers that grew it. We take
-    coffee production, roasting and brewing seriously and we’re glad to pass
-    that knowledge to anyone.
+  description: Sugar Rush is the ultimate spot for candy lovers seeking nostalgic
+    treats and unique sweets. We take pride in curating a selection that brings
+    back childhood memories while introducing you to new favorites.
   blurbs:
     - image: img/img_3597.jpg
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+        We carry an incredible selection of classic candies from decades past.
+        Remember those treats from your childhood that you can't find anymore?
+        Chances are we have them. From vintage gummies to retro chocolate bars,
+        we've got the sweets that take you back.
     - image: img/img_3601.jpg
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
+        Looking for something unique? We source specialty candies from around
+        the world. Japanese Kit-Kats, British chocolates, European gummies, and
+        more. Expand your candy horizons with treats you won't find anywhere else
+        in Bothell.
     - image: img/img_3687.jpg
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
+        Planning a party or special event? We create custom candy boxes and
+        party favors for any occasion. Birthdays, weddings, baby showers, or
+        corporate events - we'll help you put together the perfect sweet spread.
+        Contact us to discuss your needs.
     - image: img/img_3774.jpg
       text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+        We believe candy brings people together. That's why we've created a
+        welcoming space where you can browse, sample, and discover new favorites.
+        Bring the kids, bring your friends, and let us help you find your next
+        sweet obsession.
 main:
-  heading: Great coffee with no compromises
+  heading: Sweet treats with no compromises
   description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+    We're passionate about quality candy. That's why we source from trusted
+    suppliers and small-batch candy makers who share our commitment to great
+    ingredients and even better taste. Every piece of candy in our store meets
+    our standards for deliciousness.
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
+    alt: A colorful display of assorted gummy candies
     image: img/img_3961.jpg
   image2:
-    alt: A green cup of a coffee on a wooden table
+    alt: Jars of classic penny candy on wooden shelves
     image: img/img_3952.jpg
   image3:
-    alt: Coffee beans
+    alt: An assortment of chocolate truffles
     image: img/img_3759.jpg
 testimonials:
   - author: Elisabeth Kaurismäki
-    quote: The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
+    quote: The first time I walked into Sugar Rush, I felt like a kid again. They
+      had candies I hadn't seen since the 80s!
   - author: Philipp Trommler
-    quote: Kaldi is the place to go if you want the best quality coffee. I love
-      their stance on empowering farmers and transparency.
+    quote: Sugar Rush is the place to go if you want quality sweets. My kids love
+      picking out treats and I love the nostalgic selection.
 full_image: img/img_3613.jpg
 pricing:
-  heading: Monthly subscriptions
-  description: We make it easy to make great coffee a part of your life. Choose
-    one of our monthly subscription plans to receive great coffee at your
-    doorstep each month. Contact us about more details and payment info.
+  heading: Candy subscriptions
+  description: Make every month a little sweeter with our candy subscription boxes.
+    Choose a plan and receive a curated selection of treats delivered to your
+    door. Contact us for details and payment info.
   plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
+    - description: Perfect for a personal treat or to share with someone special.
       items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans
-        - One or two varieties of beans
+        - 1 lb of assorted candy per month
+        - Mix of classics and new discoveries
+        - Personalized to your taste preferences
       plan: Small
-      price: "50"
-    - description: Great for avid drinkers, java-loving couples and bigger crowds
+      price: "25"
+    - description: Great for families or anyone with a serious sweet tooth.
       items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
+        - 3 lbs of assorted candy per month
+        - Wide variety of candy types
+        - Seasonal and holiday specials included
       plan: Big
-      price: "80"
-    - description: Want a few tiny batches from different varieties? Try our custom plan
+      price: "50"
+    - description: Want something specific? Let us create a custom box just for you.
       items:
         - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
+        - Your favorite candy types
+        - Special occasion packaging available
       plan: Custom
       price: "?"
 ---
