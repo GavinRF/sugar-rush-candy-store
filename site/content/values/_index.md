@@ -8,14 +8,14 @@ values:
       those sweet memories. From classic penny candies to discontinued
       favorites, we hunt down the treats that transport you back to simpler
       times. Every visit to Sugar Rush is a trip down memory lane.
-    imageUrl: img/img_3745.jpg
+    imageUrl: img/img_3601.jpg
   - heading: Quality ingredients
     text: >
       Not all candy is created equal. We prioritize treats made with real
       ingredients - real chocolate, real fruit flavors, and time-tested recipes.
       We work with suppliers who share our commitment to quality, so every piece
       of candy we sell meets our high standards.
-    imageUrl: img/img_3768.jpg
+    imageUrl: img/img_3745.jpg
   - heading: Local community
     text: >
       Sugar Rush is proud to be part of the Bothell community. We believe a
@@ -29,7 +29,7 @@ values:
       batches with care and attention. By supporting these independent
       confectioners, we bring you unique flavors and quality you won't find in
       mass-produced treats.
-    imageUrl: /img/about-direct-sourcing.jpg
+    imageUrl: img/img_3690.jpg
   - heading: Sweet experiences
     text: >
       Candy isn't just something you eat - it's an experience. Whether you're
