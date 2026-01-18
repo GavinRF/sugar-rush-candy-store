@@ -3,7 +3,10 @@ title: Contact
 logo: img/sugar-rush-logo-white.png
 contact_entries:
   - heading: Location
-    text: 10030 Main Street Bothell, Washington, United States
+    text: |
+      10030 Main Street Bothell, Washington, United States
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2682.093245832136!2d-122.20881792351958!3d47.760245671204366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900ff7cc1be793%3A0xa2935841d3f8c88!2sSugar%20Rush%20Candy%20Store!5e0!3m2!1sen!2sus!4v1768703712349!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   - heading: Working hours
     text: |
       Mon: Closed<br>
