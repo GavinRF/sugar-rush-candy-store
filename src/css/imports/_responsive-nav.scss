@@ -20,6 +20,7 @@
     transition: height .3s ease-in-out;
     min-width: 100%;
     z-index: 1;
+    margin-right: 22px;
 }
 
 .mobile-menu-inner {
@@ -52,5 +53,11 @@
         position: static;
         min-width: unset;
         height: auto;
+    }
+}
+
+@media (--breakpoint-small) {
+    .nav-menu {
+        margin-right: 0px;
     }
 }

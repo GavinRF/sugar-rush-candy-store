@@ -1,6 +1,7 @@
 // JS Goes here - ES6 supported
 
 import "./css/main.scss";
+import "./js/main.js";
 
 const mobileMenu = document.querySelector("[data-mobile-menu]");
 const nav = document.querySelector("[data-nav]");
@@ -10,6 +11,15 @@ function toggleMobileMenu() {
 }
 
 mobileMenu.addEventListener("click", toggleMobileMenu);
+
+// Add explosion effect to all buttons
+document.querySelectorAll('.btn').forEach(button => {
+  button.addEventListener('click', (e) => {
+    if (typeof addExplosion === 'function') {
+      addExplosion(button, e);
+    }
+  });
+});
 
 // Say hello
 // eslint-disable-next-line no-console

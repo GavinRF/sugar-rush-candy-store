@@ -13,3 +13,50 @@
     box-shadow: inset 0 -4px 0 var(--primary);
   }
 }
+
+/* Hero content container for sparkles */
+.hero-content {
+  position: relative;
+  overflow: visible;
+}
+
+/* Magic dust sparkle particles */
+.dustDef {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10;
+  background: radial-gradient(circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 179, 217, 0.8) 30%,
+    rgba(168, 216, 234, 0.6) 60%,
+    rgba(184, 243, 216, 0.4) 80%,
+    transparent 100%
+  );
+  box-shadow:
+    0 0 6px 2px rgba(255, 179, 217, 0.6),
+    0 0 10px 4px rgba(168, 216, 234, 0.4),
+    0 0 14px 6px rgba(184, 243, 216, 0.3);
+}
+
+/* Exploding button effect */
+.btn {
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:active,
+.btn.explode {
+  transform: scale(0.95);
+}
+
+.btn.explode iconify-icon {
+  color: var(--primary);
+  filter: drop-shadow(0 0 3px var(--pastel-pink));
+}

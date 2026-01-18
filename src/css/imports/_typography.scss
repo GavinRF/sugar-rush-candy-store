@@ -11,7 +11,7 @@ html {
 
 h1 {
             font-family: var(--heading-font), cursive;
-            font-size: 7.2rem;
+            font-size: 9.29vw;
             font-weight: 700;
             background: repeating-linear-gradient(
                 135deg,
@@ -45,7 +45,7 @@ h1 {
             left: 0;
             z-index: -1;
             font-family: var(--heading-font), cursive;
-            font-size: 7.2rem;
+            font-size: 9.29vw;
             font-weight: 700;
             letter-spacing: .145rem;
             line-height: 1.1;
@@ -64,7 +64,7 @@ h1 {
             left: 0;
             z-index: -2;
             font-family: var(--heading-font), cursive;
-            font-size: 7.2rem;
+            font-size: 9.29vw;
             font-weight: 700;
             letter-spacing: .145rem;
             line-height: 1.1;
@@ -232,3 +232,9 @@ sup {
     text-overflow: ellipsis;
   }
 }
+
+        @media (max-width: 768) {
+          h1 {
+            font-size: 27vw !important;
+          }
+        }
