@@ -7,7 +7,7 @@ blurb:
   text: Our candy is out of this world
 intro:
   heading: What we offer
-  text: a wide variety of confectionery goodness
+  text: " "
 products:
   - image: img/gumdrop.png
     text: We carry an incredible selection of nostalgic candies from your childhood
