@@ -1,8 +1,8 @@
 baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
-title = "Sugar Rush Candy Store"
+title = "Sugar Rush 🍬 Candy Store"
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
-images = ["img/gumdrop-2.jpg"]
+images = ["img/gumdrop-cottoncandy.png"]
