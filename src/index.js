@@ -8,6 +8,8 @@ const nav = document.querySelector("[data-nav]");
 
 function toggleMobileMenu() {
   nav.classList.toggle("menu-open");
+  const isOpen = nav.classList.contains("menu-open");
+  mobileMenu.setAttribute("aria-expanded", isOpen);
 }
 
 mobileMenu.addEventListener("click", toggleMobileMenu);

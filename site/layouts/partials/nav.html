@@ -6,15 +6,15 @@
 	</a>
 
 	<!-- Primary Nav -->
-	<div data-mobile-menu class="mobile-menu-container">
-		<svg viewBox="0 0 100 80" width="40" height="25" class="mobile-menu-icon">
+	<button data-mobile-menu class="mobile-menu-container" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+		<svg viewBox="0 0 100 80" width="40" height="25" class="mobile-menu-icon" aria-hidden="true">
 			<rect class="menu-icon-top mobile-menu-inner" width="100" height="8"></rect>
 			<rect class="menu-icon-middle mobile-menu-inner" y="30" width="100" height="8"></rect>
 			<rect class="menu-icon-bottom mobile-menu-inner" y="60" width="100" height="8"></rect>
 		</svg>
-	</div>
+	</button>
 
-	<ul class="flex b grey-3 nav-menu">
+	<ul id="nav-menu" class="flex b grey-3 nav-menu">
 		<li><a href="/products" class="pa3 no-underline db">Products</a></li>
 
 		<li><a href="/values" class="pa3 no-underline db">Values</a></li>
