@@ -1,9 +1,9 @@
 ---
-title: 'Just in: Limited edition retro candy collection arriving next week'
+title: "Just in: Limited edition retro candy collection arriving next week"
 date: 2017-01-04T15:04:10.000Z
-description: >-
-  We're excited to announce a special shipment of hard-to-find nostalgic candies
-  hitting our shelves next week.
+description: We're excited to announce a special shipment of hard-to-find
+  nostalgic candies hitting our shelves next week.
+image: img_3657.jpg
 ---
 
 We've tracked down a limited supply of some of the most requested retro candies from the 70s, 80s, and 90s. These treats will be available starting Tuesday, but quantities are limited so don't wait!
