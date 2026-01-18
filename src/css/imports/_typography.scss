@@ -11,7 +11,7 @@ html {
 
 h1 {
             font-family: var(--heading-font), cursive;
-            font-size: 7.8rem;
+            font-size: 7.2rem;
             font-weight: 700;
             background: repeating-linear-gradient(
                 135deg,
@@ -45,7 +45,7 @@ h1 {
             left: 0;
             z-index: -1;
             font-family: var(--heading-font), cursive;
-            font-size: 7.8rem;
+            font-size: 7.2rem;
             font-weight: 700;
             letter-spacing: .145rem;
             line-height: 1.1;
@@ -64,7 +64,7 @@ h1 {
             left: 0;
             z-index: -2;
             font-family: var(--heading-font), cursive;
-            font-size: 7.8rem;
+            font-size: 7.2rem;
             font-weight: 700;
             letter-spacing: .145rem;
             line-height: 1.1;
@@ -83,8 +83,27 @@ body {
   font-weight: var(--body-font-weight);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--off-white);
+  background: linear-gradient(135deg, var(--light-pink) 0%, var(--light-blue) 100%);
+  color: var(--navy-text);
  }
+
+h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 105%;
+  height: 8px;
+  background-image: repeating-linear-gradient(-45deg, #ffb3d9 0px, #ffb3d9 6px, #fff 6px, #fff 12px, #a8d8ea 12px, #a8d8ea 18px, #fff 18px, #fff 24px, #b8f3d8 24px, #b8f3d8 30px, #fff 30px, #fff 36px, #ffb3d9 36px, #ffb3d9 42px, #fff 42px, #fff 48px);
+  border-radius: 4px;
+}
 
 p {
   margin-bottom: var(--spacing-medium);
