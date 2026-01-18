@@ -1,9 +1,9 @@
 ---
 title: The fascinating history of gummy bears
 date: 2016-12-17T15:04:10.000Z
-description: Those squishy, colorful bears in our candy aisle have a rich history
-  dating back over 100 years to a small candy shop in Germany.
-image: blog-flavor_wheel.jpg
+description: Those squishy, colorful bears in our candy aisle have a rich
+  history dating back over 100 years to a small candy shop in Germany.
+image: img_3664.jpg
 ---
 
 Gummy bears are one of the most popular candies in the world, but few people know the story of how they came to be. Let's explore the sweet history behind these iconic treats.
