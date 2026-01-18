@@ -4,7 +4,7 @@ subtitle: candy store
 image: img/img_3670.jpg
 blurb:
   heading: Your spot in Bothell for nostalgic candy
-  text: Our candy is out of this world
+  text: Join Gumdrop the lov-elephant for an out of this world candy filled adventure
 intro:
   heading: What we offer
   text: " "
