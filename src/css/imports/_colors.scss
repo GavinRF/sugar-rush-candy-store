@@ -72,6 +72,18 @@
   background-color: var(--black);
 }
 
+.bg-footer {
+  background-color: var(--footer-bg);
+}
+
+.bg-light-pink {
+  background-color: var(--light-pink);
+}
+
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+
 .bg-fix-primary {
   padding: 0 var(--spacing-small);
   & :first-child {

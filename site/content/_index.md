@@ -25,4 +25,11 @@ values:
     small batch candy makers and focus on quality over quantity, bringing you
     the sweetest experience possible.
   image: img/gumdrop-and-lollipop.png
+story:
+  heading: Our Story
+  text: What started as a dream to bring back the magic of old-fashioned candy
+    shops has grown into Bothell's favorite sweet spot. We opened our doors with
+    a simple mission - to create a place where every visit feels like a trip
+    down memory lane.
+  image: img/gumdrop-cottoncandy.png
 ---

@@ -1,6 +1,6 @@
 :root {
 	/* Colors */
-	--primary: rgba(255, 68, 0, 1);
+	--primary: #F40088;
 	--highlight: rgba(254, 213, 198, 1);
 	--white: rgba(255, 255, 255, 1);
 	--off-white: rgba(255, 253, 252, 1);
@@ -9,10 +9,25 @@
 	--grey-3: rgba(89, 87, 86, 1);
 	--grey-4: rgba(66, 64, 64, 1);
 	--black: rgba(43, 37, 35, 1);
+	--footer-bg: #000762;
+
+	--pastel-blue: #a8d8ea;
+    --pastel-pink: #ffb3d9;
+	--light-blue: #e3f4f9;
+    --light-pink: #ffe6f3;
+    --mint: #b8f3d8;
+    --cream: #fff9e6;
+    --deep-blue: #6ba3bf;
+    --deep-pink: #ff6baa;
+    --dark-pink: #ab2b62;
+    --text-dark: #2d3748;
+    --text-light: #5a6b7a;
 
 	/* Typography */
 	--font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 	--line-height: 1.5;
+	--body-font: 'Asap', sans-serif;
+    --heading-font: 'Fredoka', cursive;
 
 	--font-size: 18px;
 	--font-size-m: 20px;
