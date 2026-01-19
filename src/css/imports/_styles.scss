@@ -17,14 +17,14 @@
 }
 
 /* Focus styles for accessibility */
-a:focus,
+/* a:focus,
 button:focus,
 input:focus,
 textarea:focus,
 select:focus {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
-}
+} */
 
 /* Mobile menu button reset */
 button.mobile-menu-container {
@@ -47,7 +47,29 @@ button.mobile-menu-container {
   }
   & ul a:hover, & ul a:focus {
     box-shadow: inset 0 -4px 0 var(--primary);
+    outline: none;
   }
+}
+
+/* Jumbotron hero with gradient overlay */
+.jumbotron {
+  position: relative;
+}
+
+.jumbotron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    var(--footer-bg) 0%,
+    transparent 50%
+  );
+  mix-blend-mode: soft-light;
+  pointer-events: none;
 }
 
 /* Hero content container for sparkles */
@@ -96,3 +118,95 @@ button.mobile-menu-container {
   color: var(--primary);
   filter: drop-shadow(0 0 3px var(--pastel-pink));
 }
+
+/* Cart Awning */
+.cart-awning {
+  position: absolute;
+  top: 122px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 10;
+  box-shadow: 0 25px 30px rgba(7, 1, 65, 0.212);
+}
+
+.awning-stripes {
+  width: 100%;
+  height: 120px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--pastel-pink) 0px,
+    var(--pastel-pink) 40px,
+    var(--pastel-blue) 40px,
+    var(--pastel-blue) 80px
+  );
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Dimensional gradient overlay */
+.awning-stripes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 2, 110, 0.131) 0%,
+    rgba(92, 116, 255, 0.1) 30%,
+    transparent 50%,
+    rgba(255, 241, 241, 0.297) 70%,
+    rgba(250, 230, 230, 0.435) 100%
+  );
+  pointer-events: none;
+}
+
+/* Scalloped Edge */
+.scalloped-edge {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: radial-gradient(circle at 50% 0%, var(--pastel-pink) 20px, transparent 20px),
+              radial-gradient(circle at 50% 0%, var(--pastel-blue) 20px, transparent 20px);
+  background-size: 80px 20px, 80px 20px;
+  background-position: -20px 0, 20px 0;
+  background-repeat: repeat-x;
+}
+
+@media (max-width: 768px) {
+  .cart-awning {
+    top: 100px;
+    height: 40px;
+    box-shadow: 0 10px 20px rgba(7, 1, 65, 0.212);
+  }
+
+  .awning-stripes {
+    height: 40px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--pastel-pink) 0px,
+      var(--pastel-pink) 20px,
+      var(--pastel-blue) 20px,
+      var(--pastel-blue) 40px
+    );
+  }
+
+  .scalloped-edge {
+    bottom: -10px;
+    height: 10px;
+    background: radial-gradient(circle at 50% 0%, var(--pastel-pink) 10px, transparent 10px),
+                radial-gradient(circle at 50% 0%, var(--pastel-blue) 10px, transparent 10px);
+    background-size: 40px 10px, 40px 10px;
+    background-position: -10px 0, 10px 0;
+    background-repeat: repeat-x;
+  }
+
+    h1, h1::after, h1::before {
+    font-size: 2.5rem;
+  }
+}
+

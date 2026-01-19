@@ -1,11 +1,18 @@
+[data-nav] {
+    z-index: 20;
+}
+
 .mobile-menu-container {
     cursor: pointer;
     display: block;
-    padding: var(--spacing-medium) var(--spacing-small) 0 0;
+    padding: var(--spacing-large) var(--spacing-medium) 0 0;
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 2;
+    z-index: 22;
+    margin-top: 24px;
+    margin-right: 24px;
+    padding: 6px;
 }
 
 .nav-menu {
@@ -16,12 +23,18 @@
     right: 0;
     overflow-y: auto;
     position: absolute;
-    top: calc(var(--spacing-medium) + 30px);
+    top: calc(var(--spacing-medium) + 80px);
     transition: height .3s ease-in-out;
     min-width: 100%;
-    z-index: 1;
-    margin-right: 22px;
+    z-index: 21;
+    margin-right: 24px;
 }
+
+@media  (max-width: 768px){
+    .nav-menu {
+        margin-right: 0px;
+    }
+} 
 
 .mobile-menu-inner {
     transition: all .3s ease-in-out;
@@ -29,6 +42,7 @@
 
 .menu-open .nav-menu {
     height: auto;
+    background-color: (--light-pink)
 }
 
 .menu-open .menu-icon-top {
@@ -56,8 +70,3 @@
     }
 }
 
-@media (--breakpoint-small) {
-    .nav-menu {
-        margin-right: 0px;
-    }
-}
