@@ -1,7 +1,7 @@
 /* Skip link for keyboard navigation */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -48px;
   left: 0;
   background: var(--primary);
   color: white;
@@ -214,7 +214,7 @@ button.mobile-menu-container {
 
 /* Info Cards Section */
 .info-section {
-  padding: 4rem 0;
+  padding: 2.4rem 0;
 }
 
 .cards-grid {
@@ -225,7 +225,7 @@ button.mobile-menu-container {
 
 .info-card {
   background: white;
-  padding: 2.5rem;
+  padding: 1.5rem;
   border-radius: 30px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -249,19 +249,19 @@ button.mobile-menu-container {
 }
 
 .card-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 2.4rem;
+  margin-bottom: 0.21rem;
 }
 
 .card-icon iconify-icon {
-  font-size: 3rem;
+  font-size: 2.3rem;
 }
 
 .info-card h3 {
   font-family: 'Fredoka', cursive;
   font-size: 1.8rem;
   color: var(--primary);
-  margin-bottom: 1rem;
+  margin-bottom: 0.61rem;
 }
 
 .info-card p {
