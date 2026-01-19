@@ -12,6 +12,7 @@ import ContactPreview from "./cms-preview-templates/contact";
 import FooterPreview from "./cms-preview-templates/footer";
 
 CMS.registerPreviewStyle(styles, {raw: true});
+CMS.registerPreviewStyle("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Asap:ital,wght@0,100..900;1,100..900&display=swap");
 CMS.registerPreviewTemplate("home", HomePreview);
 CMS.registerPreviewTemplate("post", PostPreview);
 CMS.registerPreviewTemplate("products", ProductsPreview);
