@@ -17,14 +17,14 @@
 }
 
 /* Focus styles for accessibility */
-/* a:focus,
+a:focus,
 button:focus,
 input:focus,
 textarea:focus,
 select:focus {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
-} */
+}
 
 /* Mobile menu button reset */
 button.mobile-menu-container {
@@ -41,14 +41,16 @@ button.mobile-menu-container {
 /* Used in the navbar */
 .divider-grey {
   box-shadow: inset 0 -4px 0 var(--grey-1);
-  /* Link hover states */
-  & a {
-    transition: var(--hover-transition);
-  }
-  & ul a:hover, & ul a:focus {
-    box-shadow: inset 0 -4px 0 var(--primary);
-    outline: none;
-  }
+}
+
+/* Nav link hover/focus states */
+.nav-menu a {
+  transition: var(--hover-transition);
+}
+.nav-menu a:hover,
+.nav-menu a:focus {
+  box-shadow: inset 0 -4px 0 var(--primary);
+  outline: none;
 }
 
 /* Jumbotron hero with gradient overlay */
@@ -208,5 +210,80 @@ button.mobile-menu-container {
     h1, h1::after, h1::before {
     font-size: 2.5rem;
   }
+}
+
+/* Info Cards Section */
+.info-section {
+  padding: 4rem 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.info-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #ffb3d9 0px,
+    #ffb3d9 6px,
+    #fff 6px,
+    #fff 12px,
+    #a8d8ea 12px,
+    #a8d8ea 18px,
+    #fff 18px,
+    #fff 24px,
+    #b8f3d8 24px,
+    #b8f3d8 30px,
+    #fff 30px,
+    #fff 36px,
+    #ffb3d9 36px,
+    #ffb3d9 42px,
+    #fff 42px,
+    #fff 48px
+  );
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.card-icon iconify-icon {
+  font-size: 3rem;
+}
+
+.info-card h3 {
+  font-family: 'Fredoka', cursive;
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  color: var(--text-light);
+  line-height: 1.6;
 }
 

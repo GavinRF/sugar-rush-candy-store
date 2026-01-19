@@ -30,6 +30,17 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Blurb", name: blurb, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
+          - label: "Info Cards"
+            name: info_cards
+            widget: object
+            fields:
+              - label: "Cards"
+                name: cards
+                widget: list
+                fields:
+                  - {label: "Icon", name: "icon", widget: "string", hint: "Iconify icon name (e.g. solar:pin-outline)"}
+                  - {label: "Heading", name: "heading", widget: "string"}
+                  - {label: "Text", name: "text", widget: "text", hint: "HTML allowed for formatting (use <br> for line breaks, <strong> for bold)"}
           - {label: "Intro", name: intro, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}

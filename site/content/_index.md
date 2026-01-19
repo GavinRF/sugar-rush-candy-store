@@ -5,6 +5,17 @@ image: img/img_3670.jpg
 blurb:
   heading: Your spot in Bothell for nostalgic candy
   text: Join Gumdrop the lov-elephant for an out of this world candy filled adventure
+info_cards:
+  cards:
+    - icon: solar:pin-outline
+      heading: Find Us
+      text: "<strong>10030 Main Street</strong><br>Bothell, Washington<br>Right in the heart of downtown!"
+    - icon: bytesize:clock
+      heading: Store Hours
+      text: "<strong>Open Daily</strong><br>11:00 AM - 7:00 PM<br>Come see us soon!"
+    - icon: streamline-plump:store-2
+      heading: What We Offer
+      text: "Hard-to-find candies • Nostalgic treats<br>Luxury truffles • Ice cream<br>Novelty sweets & more!"
 intro:
   heading: What we offer
   text: " "

@@ -17,6 +17,20 @@ export default class HomePreview extends React.Component {
         </div>
       </div>
 
+      <section className="info-section">
+        <div className="cards-grid mw8 center ph3">
+          {(entry.getIn(["data", "info_cards", "cards"]) || []).map((card, i) => (
+            <div className="info-card" key={i}>
+              <div className="card-icon">
+                <iconify-icon icon={card.get("icon")}></iconify-icon>
+              </div>
+              <h3>{card.get("heading")}</h3>
+              <p dangerouslySetInnerHTML={{__html: card.get("text")}}></p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <div className="bg-off-white pv4">
         <div className="ph3 mw7 center">
           <h2 className="f2 b lh-title mb2">{entry.getIn(["data", "intro", "heading"])}</h2>

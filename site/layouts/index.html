@@ -4,6 +4,8 @@
 
 {{ partial "short-text" .Params.blurb}}
 
+{{ partial "info-cards" .Params.info_cards }}
+
 {{ partial "2-up" .Params }}
 
 {{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "image" .Params.values.image "buttonText" "Read more" "buttonLink" "/values") }}
