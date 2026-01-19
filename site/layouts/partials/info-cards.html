@@ -2,7 +2,7 @@
     <div class="cards-grid mw8 center ph3">
         {{ range .cards }}
         <div class="info-card">
-            <div class="card-icon"><iconify-icon icon="{{ .icon }}"></iconify-icon></div>
+            <div class="card-icon"><iconify-icon {{ printf "icon=%q" .icon | safeHTMLAttr }}></iconify-icon></div>
             <h3>{{ .heading }}</h3>
             <p>{{ .text | safeHTML }}</p>
         </div>
