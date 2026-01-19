@@ -1,6 +1,6 @@
 ---
 title: A beginner's guide to building the perfect candy gift box
-date: 2017-01-04T15:04:10.000Z
+date: 2025-12-30T15:04:10.000Z
 description: Creating a custom candy gift box might seem overwhelming with so
   many choices, but with a few simple tips, you can craft a sweet surprise
   that's perfect for any occasion.
