@@ -3,17 +3,34 @@ import React from "react";
 import Jumbotron from "./components/jumbotron";
 
 export default class HomePreview extends React.Component {
+  componentDidMount() {
+    // Load iconify script for icon previews
+    if (!document.querySelector('script[src*="iconify"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js';
+      document.head.appendChild(script);
+    }
+  }
+
   render() {
     const {entry, getAsset} = this.props;
     const image = getAsset(entry.getIn(["data", "image"]));
+    const blurbImage = getAsset(entry.getIn(["data", "blurb", "image"]));
 
     return <div>
       <Jumbotron image={image} title={entry.getIn(["data", "title"])} subtitle={entry.getIn(["data", "subtitle"])}/>
 
-      <div className="bg-grey-1 pv4">
-        <div className="flex-l mhn1-l ph3 center mw7">
-          <h2 className="f2 b lh-title mb2 w-40-l">{entry.getIn(["data", "blurb", "heading"])}</h2>
-          <p className="w-60-l mb0">{entry.getIn(["data", "blurb", "text"])}</p>
+      <div className="bg-light-blue pv4">
+        <div className="ph3 mw7 center">
+          <div className="flex-l mhn2-l items-center">
+            <div className="w-50-l ph2-l">
+              <h2 className="f2 b lh-title mb2">{entry.getIn(["data", "blurb", "heading"])}</h2>
+              <p className="mb0">{entry.getIn(["data", "blurb", "text"])}</p>
+            </div>
+            {blurbImage && <div className="w-50-l ph2-l">
+              <img src={blurbImage} alt="" className="mb3"/>
+            </div>}
+          </div>
         </div>
       </div>
 
@@ -49,7 +66,7 @@ export default class HomePreview extends React.Component {
         </div>
       </div>
 
-      <div className="bg-grey-1 pv4">
+      <div className="bg-light-blue pv4">
         <div className="ph3 mw7 center">
 
           <div className="flex-l mhn2-l">
@@ -60,12 +77,30 @@ export default class HomePreview extends React.Component {
             </div>
 
             <div className="w-60-l ph2-l">
-              <img src="/img/home-about-section.jpg" alt="" className="mb3"/>
+              <img src={getAsset(entry.getIn(["data", "values", "image"]))} alt="" className="mb3"/>
             </div>
           </div>
 
           <div className="tc">
-            <a href="{{.buttonLink}}" className="btn raise">Read more</a>
+            <a href="/values" className="btn raise">Read more</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div className="bg-light-pink pv4">
+        <div className="ph3 mw7 center">
+
+          <div className="flex-l mhn2-l">
+            <div className="w-60-l ph2-l">
+              <img src={getAsset(entry.getIn(["data", "story", "image"]))} alt="" className="mb3"/>
+            </div>
+
+            <div className="w-40-l ph2-l">
+              <h2 className="f2 b lh-title mb2">{entry.getIn(["data", "story", "heading"])}</h2>
+
+              <p>{entry.getIn(["data", "story", "text"])}</p>
+            </div>
           </div>
 
         </div>
