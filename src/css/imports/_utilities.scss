@@ -35,3 +35,19 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+/* Preserve line breaks in text */
+.pre-line {
+  white-space: pre-line;
+}
+
+/* Padding for pages without hero (to clear awning) */
+.pt-awning {
+  padding-top: 180px;
+}
+
+@media (max-width: 768px) {
+  .pt-awning {
+    padding-top: 120px;
+  }
+}

@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div class="ph3 bg-off-white">
+<div class="ph3 bg-off-white pt-awning">
 	<div class="center mw6 pv3">
 
 		<img src="{{ .Params.logo }}" alt="{{ .Params.logo_alt }}" class="db w4 center pv4">
@@ -11,7 +11,7 @@
 	        	{{ range .Params.contact_entries }}
 				<div>
 					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
-					<div>{{ .text | safeHTML }}</div>
+					<div class="pre-line">{{ .text | safeHTML }}</div>
 				</div>
 			{{ end }}
 		</div>
