@@ -41,13 +41,13 @@ main:
     our standards for deliciousness.
   image1:
     alt: A colorful display of assorted gummy candies
-    image: img/img_3961.jpg
+    image: img/img_3961.webp
   image2:
     alt: Jars of classic penny candy on wooden shelves
-    image: img/img_3952.jpg
+    image: img/img_3952.webp
   image3:
     alt: An assortment of chocolate truffles
-    image: img/img_3759.jpg
+    image: img/img_3759.webp
 testimonials:
   - author: Elisabeth Kaurismäki
     quote: The first time I walked into Sugar Rush, I felt like a kid again. They
@@ -55,7 +55,7 @@ testimonials:
   - author: Philipp Trommler
     quote: Sugar Rush is the place to go if you want quality sweets. My kids love
       picking out treats and I love the nostalgic selection.
-full_image: img/img_3613.jpg
+full_image: img/img_3613.webp
 pricing:
   heading: Candy subscriptions
   description: Make every month a little sweeter with our candy subscription
