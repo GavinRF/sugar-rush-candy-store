@@ -3,12 +3,13 @@ title: Contact
 logo: img/sugar-rush-logo-white.png
 contact_entries:
   - heading: Location
-    text: |-
+    text: |+
       10030 Main Street Bothell,
       Washington, United States
+
   - heading: Working hours
     text: |-
-      Mon: Closed\
+      Mon: Closed
       Tue: 11:00 am – 07:00 pm
       Wed: 11:00 am – 07:00 pm
       Thu: 11:00 am – 07:00 pm
