@@ -1,7 +1,5 @@
 ---
 title: Our Candy
-type: products
-image: img/img_3588.webp
 intro:
   heading: What we offer
   description: Sugar Rush is the ultimate spot for candy lovers seeking nostalgic
@@ -14,24 +12,30 @@ intro:
         Remember those treats from your childhood that you can't find anymore?
         Chances are we have them. From vintage gummies to retro chocolate bars,
         we've got the sweets that take you back.
+      imageAlt: cascading buckets of pastel salt water taffy
     - image: img/img_3601.webp
       text: >
         Looking for something unique? We source specialty candies from around
         the world. Japanese Kit-Kats, British chocolates, European gummies, and
         more. Expand your candy horizons with treats you won't find anywhere
         else in Bothell.
+      imageAlt: a shelf of various novelty candy items, including candy sticks, corn
+        on the cob candy, capuccino cream, sour bluberry candy fish
     - image: img/img_3687.webp
       text: >
         Planning a party or special event? We create custom candy boxes and
         party favors for any occasion. Birthdays, weddings, baby showers, or
         corporate events - we'll help you put together the perfect sweet spread.
         Contact us to discuss your needs.
+      imageAlt: a worker holds a tray of shiny artfully crafted chocolate truffles
     - image: img/img_3774.webp
       text: >
         We believe candy brings people together. That's why we've created a
         welcoming space where you can browse, sample, and discover new
         favorites. Bring the kids, bring your friends, and let us help you find
         your next sweet obsession.
+      imageAlt: jars of hard sugar candy sit on a shelf, in focus is a jar of honey
+        made orange and lemon candies
 main:
   heading: Sweet treats with no compromises
   description: >
@@ -40,13 +44,14 @@ main:
     ingredients and even better taste. Every piece of candy in our store meets
     our standards for deliciousness.
   image1:
-    alt: A colorful display of assorted gummy candies
+    alt: A colorful display of assorted gummy candies with a acrylic neon sign that
+      reads "yes you candy"
     image: img/img_3961.webp
   image2:
-    alt: Jars of classic penny candy on wooden shelves
+    alt: A display of the famous Kunafa chocolate with pistachio creme
     image: img/img_3952.webp
   image3:
-    alt: An assortment of chocolate truffles
+    alt: Jars of classic penny candy on wooden shelves
     image: img/img_3759.webp
 testimonials:
   - author: Elisabeth Kaurismäki
@@ -56,6 +61,7 @@ testimonials:
     quote: Sugar Rush is the place to go if you want quality sweets. My kids love
       picking out treats and I love the nostalgic selection.
 full_image: img/img_3613.webp
+full_image_alt: "bags of pretzels and hard shelled chocolates mixed "
 pricing:
   heading: Candy subscriptions
   description: Make every month a little sweeter with our candy subscription
@@ -83,4 +89,6 @@ pricing:
         - Special occasion packaging available
       plan: Custom
       price: "?"
+type: products
+image: img/img_3588.webp
 ---
