@@ -1,6 +1,7 @@
 ---
 title: Contact
 logo: img/sugar-rush-logo-white.png
+logo_alt: gumdrop the elephat holds a giant rainbow swirl lolly in their trunk
 contact_entries:
   - heading: Location
     text: |+
