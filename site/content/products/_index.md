@@ -1,37 +1,37 @@
 ---
 title: Our Candy
 type: products
-image: img/img_3588.jpg
+image: img/img_3588.webp
 intro:
   heading: What we offer
   description: Sugar Rush is the ultimate spot for candy lovers seeking nostalgic
     treats and unique sweets. We take pride in curating a selection that brings
     back childhood memories while introducing you to new favorites.
   blurbs:
-    - image: img/img_3597.jpg
+    - image: img/img_3597.webp
       text: >
         We carry an incredible selection of classic candies from decades past.
         Remember those treats from your childhood that you can't find anymore?
         Chances are we have them. From vintage gummies to retro chocolate bars,
         we've got the sweets that take you back.
-    - image: img/img_3601.jpg
+    - image: img/img_3601.webp
       text: >
         Looking for something unique? We source specialty candies from around
         the world. Japanese Kit-Kats, British chocolates, European gummies, and
-        more. Expand your candy horizons with treats you won't find anywhere else
-        in Bothell.
-    - image: img/img_3687.jpg
+        more. Expand your candy horizons with treats you won't find anywhere
+        else in Bothell.
+    - image: img/img_3687.webp
       text: >
         Planning a party or special event? We create custom candy boxes and
         party favors for any occasion. Birthdays, weddings, baby showers, or
         corporate events - we'll help you put together the perfect sweet spread.
         Contact us to discuss your needs.
-    - image: img/img_3774.jpg
+    - image: img/img_3774.webp
       text: >
         We believe candy brings people together. That's why we've created a
-        welcoming space where you can browse, sample, and discover new favorites.
-        Bring the kids, bring your friends, and let us help you find your next
-        sweet obsession.
+        welcoming space where you can browse, sample, and discover new
+        favorites. Bring the kids, bring your friends, and let us help you find
+        your next sweet obsession.
 main:
   heading: Sweet treats with no compromises
   description: >
@@ -58,9 +58,9 @@ testimonials:
 full_image: img/img_3613.jpg
 pricing:
   heading: Candy subscriptions
-  description: Make every month a little sweeter with our candy subscription boxes.
-    Choose a plan and receive a curated selection of treats delivered to your
-    door. Contact us for details and payment info.
+  description: Make every month a little sweeter with our candy subscription
+    boxes. Choose a plan and receive a curated selection of treats delivered to
+    your door. Contact us for details and payment info.
   plans:
     - description: Perfect for a personal treat or to share with someone special.
       items:
