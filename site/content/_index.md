@@ -1,7 +1,7 @@
 ---
 title: Sugar Rush
 subtitle: candy store
-image: img/img_3670.jpg
+image: img/img_3670.webp
 blurb:
   heading: Your spot in Bothell for nostalgic candy
   text: Join Gumdrop the lov-elephant for an out of this world candy filled adventure
