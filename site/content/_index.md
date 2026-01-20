@@ -14,7 +14,14 @@ info_cards:
         heart of downtown!
     - icon: bytesize:clock
       heading: Store Hours
-      text: <strong>Open Daily</strong><br>11:00 AM - 7:00 PM<br>Come see us soon!
+      text: |-
+        Mon: Closed <br>
+        Tue: 11:00 am – 07:00 pm <br>
+        Wed: 11:00 am – 07:00 pm <br>
+        Thu: 11:00 am – 07:00 pm <br>
+        Fri: 11:00 am – 08:00 pm <br>
+        Sat: 10:00 am – 08:00 pm <br>
+        Sun: 11:00 am – 05:00 pm <br>
     - icon: streamline-plump:store-2
       heading: What We Offer
       text: Hard-to-find candies • Nostalgic treats<br>Luxury truffles • Ice
