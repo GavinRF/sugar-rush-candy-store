@@ -35,10 +35,13 @@ products:
       favorites to unique treats from around the world. From classic gummies and
       chocolates to hard-to-find retro sweets, we've got something to satisfy
       every sweet tooth. Stop by or contact us to see what's in stock.
+    imageAlt: a loveable elephant offering a big hug
   - image: img/gumdrop-eating-gumdrop.png
     text: Looking for the perfect gift? We offer custom candy boxes and party favors
       for every occasion. Whether it's a birthday, wedding, or just because,
       we'll help you create a sweet surprise that will make anyone smile.
+    imageAlt: Gumdrop the elephant holding a big green gumdrop with a bite taken out
+      of it.
 values:
   heading: Our values
   text: Candy brings joy and sparks memories of simpler times. At Sugar Rush, we
@@ -46,6 +49,8 @@ values:
     small batch candy makers and focus on quality over quantity, bringing you
     the sweetest experience possible.
   image: img/gumdrop-and-lollipop.png
+  imageAlt: "Gumdrop stands below a giant rainbow swirl lollypop looking up in
+    amazement "
 story:
   heading: Our Story
   text: What started as a dream to bring back the magic of old-fashioned candy
@@ -53,4 +58,6 @@ story:
     a simple mission - to create a place where every visit feels like a trip
     down memory lane.
   image: img/gumdrop-cottoncandy.png
+  imageAlt: Gumdrop the elephant sits on a cloud of pink and blue cotton candy,
+    holding their tummy and grinning ear to giant ear
 ---
