@@ -17,7 +17,7 @@ export default class ProductsPreview extends React.Component {
 
           <div className="flex-ns flex-wrap mhn2-ns mb3">
             {(entry.getIn(["data", "intro", "blurbs"]) || []).map((blurb, index) => <div className="ph2-ns w-50-ns mb4" key={index}>
-              <img src={blurb.get("image") && getAsset(blurb.get("image"))} alt="" className="center db mb3" style={{width: "240px"}}/>
+              <img src={blurb.get("image") && getAsset(blurb.get("image"))} alt={blurb.get("imageAlt") || ""} className="center db mb3" style={{width: "240px"}}/>
               <p>{blurb.get("text")}</p>
             </div>)}
           </div>
@@ -35,15 +35,15 @@ export default class ProductsPreview extends React.Component {
 
         <div className="flex flex-wrap mhn1">
           <div className="w-100 w-50-ns ph1-ns">
-            <img src={getAsset(entry.getIn(["data", "main", "image1", "image"]))}/>
+            <img src={getAsset(entry.getIn(["data", "main", "image1", "image"]))} alt={entry.getIn(["data", "main", "image1", "alt"]) || ""}/>
           </div>
 
           <div className="w-100 w-50-ns ph1-ns">
-            <img src={getAsset(entry.getIn(["data", "main", "image2", "image"]))}/>
+            <img src={getAsset(entry.getIn(["data", "main", "image2", "image"]))} alt={entry.getIn(["data", "main", "image2", "alt"]) || ""}/>
           </div>
 
           <div className="w-100 ph1-ns">
-            <img src={getAsset(entry.getIn(["data", "main", "image3", "image"]))}/>
+            <img src={getAsset(entry.getIn(["data", "main", "image3", "image"]))} alt={entry.getIn(["data", "main", "image3", "alt"]) || ""}/>
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@ export default class ProductsPreview extends React.Component {
         </div>)}
       </div>
 
-      <img src={getAsset(entry.getIn(["data", "full_image"]))} alt="" className="db w-100"/>
+      <img src={getAsset(entry.getIn(["data", "full_image"]))} alt={entry.getIn(["data", "full_image_alt"]) || ""} className="db w-100"/>
 
       <div className="bg-off-white pv4 ph3">
         <div className="mw7 center">

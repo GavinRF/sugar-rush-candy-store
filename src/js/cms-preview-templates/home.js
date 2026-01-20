@@ -55,7 +55,7 @@ export default class HomePreview extends React.Component {
 
           <div className="flex-ns mhn2-ns mb3">
             {(entry.getIn(["data", "products"]) || []).map((product, i) => <div className="ph2-ns w-50-ns" key={i}>
-              <img src={getAsset(product.get("image"))} alt="" className="center db mb3" style={{width: "240px"}}/>
+              <img src={getAsset(product.get("image"))} alt={product.get("imageAlt") || ""} className="center db mb3" style={{width: "240px"}}/>
               <p>{product.get("text")}</p>
             </div>)}
           </div>
@@ -77,7 +77,7 @@ export default class HomePreview extends React.Component {
             </div>
 
             <div className="w-60-l ph2-l">
-              <img src={getAsset(entry.getIn(["data", "values", "image"]))} alt="" className="mb3"/>
+              <img src={getAsset(entry.getIn(["data", "values", "image"]))} alt={entry.getIn(["data", "values", "imageAlt"]) || ""} className="mb3"/>
             </div>
           </div>
 
@@ -93,7 +93,7 @@ export default class HomePreview extends React.Component {
 
           <div className="flex-l mhn2-l">
             <div className="w-60-l ph2-l">
-              <img src={getAsset(entry.getIn(["data", "story", "image"]))} alt="" className="mb3"/>
+              <img src={getAsset(entry.getIn(["data", "story", "image"]))} alt={entry.getIn(["data", "story", "imageAlt"]) || ""} className="mb3"/>
             </div>
 
             <div className="w-40-l ph2-l">
