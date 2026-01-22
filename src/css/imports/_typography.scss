@@ -238,3 +238,102 @@ sup {
             font-size: 27vw !important;
           }
         }
+
+/* Kerned title - per-letter spacing control for "Sugar Rush" */
+h1.kerned-title > span {
+  display: inline;
+}
+
+h1.kerned-title .letter {
+  display: inline-block;
+  position: relative;
+  white-space: pre;
+}
+
+/* Disable h1 pseudo-elements for kerned title (handled per-letter instead) */
+h1.kerned-title::before,
+h1.kerned-title::after {
+  content: none;
+}
+
+/* Per-letter ::before - highlight layer */
+h1.kerned-title .letter::before {
+  content: attr(data-char);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: translate(-.081rem, -.081rem);
+}
+
+/* Per-letter ::after - shadow layer */
+h1.kerned-title .letter::after {
+  content: attr(data-char);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background: linear-gradient(185deg, rgba(134, 2, 157, 0), rgba(216, 29, 237, 0.49));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: translate(.12rem, .12rem);
+}
+
+/* Kerning values for "Sugar Rush" (S-u-g-a-r- -R-u-s-h) */
+/* Adjust these values to fine-tune letter spacing */
+h1.kerned-title .letter-0 { margin-right: -.15rem; }      /* S */
+h1.kerned-title .letter-1 { margin-right: -.15rem; }      /* u */
+h1.kerned-title .letter-2 { margin-right: 0; }      /* g */
+h1.kerned-title .letter-3 { margin-right: 0; }      /* a */
+h1.kerned-title .letter-4 { margin-right: 0; }      /* r */
+h1.kerned-title .letter-5 { margin-right: 0; }      /* (space) */
+h1.kerned-title .letter-6 { margin-right: 0; }      /* R */
+h1.kerned-title .letter-7 { margin-right: 0; }      /* u */
+h1.kerned-title .letter-8 { margin-right: 0; }      /* s */
+h1.kerned-title .letter-9 { margin-right: 0; }      /* h */
+
+/* Custom patterns for specific letters */
+h1.kerned-title .letter-1,
+h1.kerned-title .letter-4 { /* u - simple gradient */
+  background: linear-gradient(180deg, var(--pastel-pink) 0%, var(--deep-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h1.kerned-title .letter-2,  /* g */
+h1.kerned-title .letter-6 { /* R */
+  background:
+    radial-gradient(circle at 25% 25%, var(--pastel-pink) 6%, transparent 7%),
+    radial-gradient(circle at 75% 25%, var(--pastel-blue) 9%, transparent 10%),
+    // radial-gradient(circle at 50% 50%, var(--pastel-blue) 15%, transparent 16%),
+    radial-gradient(circle at 25% 75%, var(--pastel-blue) 8%, transparent 9%),
+    radial-gradient(circle at 75% 75%, var(--pastel-pink) 11%, transparent 12%),
+    var(--deep-pink);
+  background-size: 20px 20px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h1.kerned-title .letter-8 { /* s - alternate candy stripe */
+  background: repeating-linear-gradient(
+    45deg,
+    var(--pastel-pink) 0px,
+    var(--pastel-pink) 14px,
+    var(--white) 14px,
+    var(--white) 16px,
+    var(--pastel-blue) 16px,
+    var(--pastel-blue) 30px,
+    var(--white) 30px,
+    var(--white) 32px
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

@@ -18,7 +18,7 @@ export default class HomePreview extends React.Component {
     const blurbImage = getAsset(entry.getIn(["data", "blurb", "image"]));
 
     return <div>
-      <Jumbotron image={image} title={entry.getIn(["data", "title"])} subtitle={entry.getIn(["data", "subtitle"])}/>
+      <Jumbotron image={image} title={entry.getIn(["data", "title"])} subtitle={entry.getIn(["data", "subtitle"])} kerned={true}/>
 
       <div className="bg-light-blue pv4">
         <div className="ph3 mw7 center">

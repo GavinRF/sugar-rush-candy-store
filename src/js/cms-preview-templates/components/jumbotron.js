@@ -2,7 +2,21 @@ import React from "react";
 
 export default class Jumbotron extends React.Component {
   render() {
-    const {image, title, subtitle} = this.props;
+    const {image, title, subtitle, kerned} = this.props;
+
+    const renderTitle = () => {
+      if (kerned && title) {
+        return (
+          <span aria-hidden="true">
+            {title.split('').map((char, i) => (
+              <span key={i} className={`letter letter-${i}`} data-char={char}>{char}</span>
+            ))}
+          </span>
+        );
+      }
+      return title;
+    };
+
     return <div>
       <div className="pv5 pv6-l ph3 bg-center cover" style={{
         backgroundImage: image && `url(${image})`
@@ -10,8 +24,12 @@ export default class Jumbotron extends React.Component {
         <div className="mw7 center ph3">
           <div className="db mb3">
             <div className="mw7 relative bg-fix-primary mb3">
-              <h1 className="f2 f1-l b di lh-title mb3 white mw6 bg-primary">
-                { title }
+              <h1
+                className={`f2 f1-l b di lh-title mb3 white mw6 bg-primary${kerned ? ' kerned-title' : ''}`}
+                data-text={title}
+                {...(kerned ? {'aria-label': title} : {})}
+              >
+                { renderTitle() }
               </h1>
             </div>
             <div className="mw7 relative bg-fix-primary">

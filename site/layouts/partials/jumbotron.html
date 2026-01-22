@@ -2,9 +2,19 @@
   <div class="mw7 center ph3 hero-content">
     <div class="db mb3">
       <div class="mw7 relative mb3">
+        {{ if .kerned }}
+        <h1 data-text="{{.title}}" aria-label="{{.title}}" class="kerned-title">
+          <span aria-hidden="true">
+            {{- range $i, $char := split .title "" -}}
+            <span class="letter letter-{{$i}}" data-char="{{$char}}">{{$char}}</span>
+            {{- end -}}
+          </span>
+        </h1>
+        {{ else }}
         <h1 data-text="{{.title}}">
           {{.title}}
         </h1>
+        {{ end }}
       </div>
       <div class="mw7 relative bg-fix-primary">
         {{ if .subtitle }}

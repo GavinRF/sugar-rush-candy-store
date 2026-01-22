@@ -212,6 +212,14 @@ button.mobile-menu-container {
   }
 }
 
+mark {
+  background-color: greenyellow;
+}
+
+::selection {
+  background-color: rgba(172, 255, 47, 0.317);
+}
+
 /* Info Cards Section */
 .info-section {
   padding: 2.4rem 0;
