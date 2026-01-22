@@ -1,5 +1,5 @@
 ---
-title: Sugar Rush
+title: Sug ar Ru sh
 subtitle: candy store
 image: img/img_3670.webp
 blurb:
