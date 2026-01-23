@@ -60,4 +60,9 @@ story:
   image: img/gumdrop-cottoncandy.png
   imageAlt: Gumdrop the elephant sits on a cloud of pink and blue cotton candy,
     holding their tummy and grinning ear to giant ear
+testimonials:
+  - quote: The first time I walked into Sugar Rush, I felt like a kid again. They had candies I hadn't seen since the 80s!
+    author: Elisabeth K.
+  - quote: My kids love picking out treats and I love the nostalgic selection. Sugar Rush is our new favorite weekend stop!
+    author: Philipp T.
 ---

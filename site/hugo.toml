@@ -6,3 +6,4 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
 images = ["img/gumdrop-cottoncandy.png"]
+googleAnalyticsID = "G-LWGGGFTSNW"

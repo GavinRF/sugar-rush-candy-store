@@ -1,6 +1,9 @@
 <a href="{{ .RelPermalink }}" class="no-underline pa3 bg-light-blue br1 mb2 db raise w-100">
+	{{ with .Resources.Get .Params.image }}
+	<img src="{{ .RelPermalink }}" alt="{{ $.Title }}" class="w-100 br1 mb2" style="aspect-ratio: 16/9; object-fit: cover;" />
+	{{ end }}
 	<h2 class="f4 b lh-title mb1 primary">{{ .Title }}</h2>
-	<p class="mid-gray lh-title mb2">{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+	<p class="blog-card-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
 	<p class="mb0">{{ .Description }}</p>
 	<p class="link b dib black mb0">Read more →</p>
 </a>

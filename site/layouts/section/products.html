@@ -17,15 +17,17 @@
 {{ partial "image-grid" . }}
 {{ end }}
 
-<div class="pb4">
+<!-- <div class="pb4 ma4 ph3 mw8 center flex-ns flex-wrap justify-center">
   {{ range .Params.testimonials }}
     {{ partial "blockquote" . }}
   {{ end }}
-</div>
+</div> -->
 
 <!-- Full-width image -->
-<img src="{{ .Params.full_image }}" alt="{{ .Params.full_image_alt }}" class="db w-100">
+<img src="{{ .Params.full_image }}" alt="{{ .Params.full_image_alt }}" class="db w-100" style="max-height: 800px; object-fit: cover;">
 
+{{/* Candy subscription section - commented out until service is ready
 {{ partial "table" .Params.pricing }}
+*/}}
 
 {{ end }}

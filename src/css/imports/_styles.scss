@@ -258,7 +258,7 @@ mark {
 
 .card-icon {
   font-size: 2.4rem;
-  margin-bottom: 0.21rem;
+  // margin-bottom: 0.21rem;
 }
 
 .card-icon iconify-icon {
@@ -275,5 +275,80 @@ mark {
 .info-card p {
   color: var(--text-light);
   line-height: 1.6;
+}
+
+/* Blog cards */
+a.bg-light-blue {
+  box-shadow: 2px 1px 8px rgba(5, 5, 80, 0.2);
+}
+
+/* Testimonial cards */
+.testimonial-card {
+  padding: 2rem 2rem 1.5rem;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 2px 1px 8px rgba(5, 5, 80, 0.2);
+  font-style: italic;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 0.45rem;
+  left: 1rem;
+  font-size: 5rem;
+  font-family: Georgia, serif;
+  color: var(--pastel-pink);
+  opacity: 0.6;
+  line-height: 1;
+  font-style: normal;
+}
+
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--pastel-pink), var(--pastel-blue), var(--mint));
+  border-radius: 0 0 16px 16px;
+}
+
+.testimonial-author {
+  display: block;
+  text-align: right;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--deep-pink);
+  font-size: 0.9rem;
+}
+
+.testimonial-author::before {
+  content: '— ';
+}
+
+.testimonial-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  display: block;
+  border: 3px solid var(--pastel-blue);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card-date {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--deep-pink);
+  margin-bottom: 0.5rem;
 }
 

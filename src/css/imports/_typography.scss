@@ -107,12 +107,13 @@ h2::after {
   z-index: -1;
 }
 
-/* Remove candy underline from blog post h2s */
-.cms h2::after {
+/* Remove candy underline from blog post h2s and blog cards */
+.cms h2::after,
+a.bg-light-blue h2::after {
   content: none;
 }
 
-h3 {
+h3:not(.info-card h3) {
   margin-top: 1.5rem;
   padding-top: .5rem;
 }

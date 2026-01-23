@@ -3,39 +3,42 @@
 	<div class="mw7 center pt3">
 
 		<div class="measure-narrow center mb4">
-
 			<img src="/img/sugar-rush-logo-navy.png" alt="Sugar Rush Candy Store logo" class="db w4 center mb4 br0">
+		</div>
+
+		<div class="flex-ns justify-between">
+
+			<div class="tc tl-ns">
+				<h3 class="f4 b lh-title mb1 primary">Sugar Rush</h3>
+				<ul class="mb3 f5 f6-ns">
+					<li class="mv2 mv1-ns"><a href="/" class="link">Home</a></li>
+					<li class="mv2 mv1-ns"><a href="/products" class="link">Our Products</a></li>
+					<li class="mv2 mv1-ns"><a href="/values" class="link">Values</a></li>
+					<li class="mv2 mv1-ns"><a href="/post" class="link">Blog</a></li>
+					<li class="mv2 mv1-ns"><a href="/contact" class="link">Contact</a></li>
+				</ul>
+			</div>
+
+			<div class="measure-narrow center mt4">
+
 			<p class="f3 lh-title light-gray b tc mb2">{{ .Site.Data.footer.title }}</p>
-			<p>{{ .Site.Data.footer.blurb }}</p>
+			<p class="tc">{{ .Site.Data.footer.blurb }}</p>
 
 			{{ partial "newsletter-form" . }}
 
 		</div>
 
-		<div class="flex-ns justify-between">
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Sugar Rush</h3>
-				<ul class="mb3">
-					<li><a href="/" class="link">Home</a></li>
-					<li><a href="/products" class="link">Our products</a></li>
-					<li><a href="/values" class="link">About</a></li>
-					<li><a href="/post" class="link">Blog</a></li>
-					<li><a href="/contact" class="link">Contact</a></li>
-				</ul>
-			</div>
-
-			<div>
+			<!-- <div>
 				<h3 class="f4 b lh-title mb1 primary">Find out more</h3>
 				<ul class="mb3">
 					<li><a href="/post/jamaica-blue/" class="link">Latest offers</a></li>
 					<li><a href="/contact" class="link">Schedule an appointment</a></li>
 				</ul>
-			</div>
+			</div> -->
 
-			<div>
+			<div class="tc tl-ns">
 				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
-				<ul class="mhn2">
+				<ul class="mhn2 center ml0-ns">
 					{{ partial "social-icon" (dict "link" "https://www.facebook.com/p/Sugar-Rush-Candy-Store-100084678555001/" "svg" "icons-facebook" "alt" "Sugar Rush on Facebook") }}
 					{{ partial "social-icon" (dict "link" "https://www.instagram.com/sugar_rush.candy_store/" "svg" "icons-instagram" "alt" "Sugar Rush on Instagram") }}
 				</ul>

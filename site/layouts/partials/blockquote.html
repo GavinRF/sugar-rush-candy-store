@@ -1,9 +1,9 @@
-<div class="center mb3 ph3">
-	<blockquote class="bg-light-pink primary pa3 mb3 br1 b mw6 center">
+<div class="mb3 ph2 w-100 w-50-ns">
+	<blockquote class="testimonial-card bg-light-pink primary h-100">
 		{{ with .image }}
-		<img src="{{ . }}" alt="{{ $.imageAlt }}" class="db center mb3 br1" />
+		<img src="{{ . }}" alt="{{ $.imageAlt }}" class="testimonial-photo" />
 		{{ end }}
-		<p class="f4 mb0">"{{ .quote }}"</p>
-		<cite class="tr db grey-3">{{ .author }}</cite>
+		<p class="f4 mb3 lh-copy">"{{ .quote }}"</p>
+		<cite class="testimonial-author">{{ .author }}</cite>
 	</blockquote>
 </div>
