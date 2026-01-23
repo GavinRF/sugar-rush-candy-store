@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "kerned" true) }}
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "kerned" true "bgLeftMobile" true) }}
 
 {{ partial "short-text" .Params.blurb}}
 
@@ -15,7 +15,7 @@
 {{ with .Params.testimonials }}
 <div class="bg-light-blue pt4 pb5">
   <div class="ph3 mw7 center">
-    <h2 class="f2 b lh-title mb3">What our customers say</h2>
+    <h2 class="f2 b lh-title mb3">What our customers&nbsp;say</h2>
     <div class="flex-ns flex-wrap pb3">
       {{ range . }}
         {{ partial "blockquote" . }}

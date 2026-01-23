@@ -1,5 +1,16 @@
-// Exploding candy button effect
+// Check for reduced motion preference
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Exploding candy button effect
         window.addExplosion = function(button, event) {
+            // Skip animation if user prefers reduced motion
+            if (prefersReducedMotion) {
+                if (button.tagName === 'A' && event) {
+                    // Don't prevent default, let normal navigation happen
+                    return;
+                }
+                return;
+            }
             // If it's a link, prevent default and navigate after animation
             if (button.tagName === 'A' && event) {
                 event.preventDefault();
@@ -53,6 +64,8 @@
 
         // Magic Dust Sparkles around H1
         function initSparkles() {
+            // Skip sparkles if user prefers reduced motion
+            if (prefersReducedMotion) return;
             const head = document.getElementsByTagName('head')[0];
             let animationId = 1;
 

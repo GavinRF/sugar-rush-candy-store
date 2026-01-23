@@ -1,12 +1,19 @@
-<div class="jumbotron pv5 pv6-l ph3 bg-center cover" style="background-image: url('{{.imageUrl}}')">
+<div class="jumbotron pv5 pv6-l ph3 bg-center cover{{ if .bgLeftMobile }} bg-left-mobile{{ end }}" style="background-image: url('{{.imageUrl}}')">
   <div class="mw7 center ph3 hero-content">
     <div class="db mb3">
       <div class="mw7 relative mb3">
         {{ if .kerned }}
         <h1 data-text="{{.title}}" aria-label="{{.title}}" class="kerned-title">
           <span aria-hidden="true">
-            {{- range $i, $char := split .title "" -}}
-            <span class="letter letter-{{$i}}" data-char="{{$char}}">{{$char}}</span>
+            {{- $globalIndex := 0 -}}
+            {{- range $wordIndex, $word := split .title " " -}}
+              {{- if $wordIndex }}<span class="letter letter-{{ $globalIndex }}" data-char=" "> </span>{{- $globalIndex = add $globalIndex 1 -}}{{ end -}}
+              <span class="word">
+                {{- range $i, $char := split $word "" -}}
+                  <span class="letter letter-{{ add $globalIndex $i }}" data-char="{{$char}}">{{$char}}</span>
+                {{- end -}}
+              </span>
+              {{- $globalIndex = add $globalIndex (len $word) -}}
             {{- end -}}
           </span>
         </h1>
@@ -18,7 +25,7 @@
       </div>
       <div class="mw7 relative bg-fix-primary">
         {{ if .subtitle }}
-        <p class="b f4 di lh-title mb3 white mw6 bg-primary br1 pl2 pr2 pb1 pt0">
+        <p class="b f5 f4-ns di lh-title mb3 white mw6 bg-primary br1 pl2 pr2 pb1 pt0">
           {{.subtitle}}
         </p>
         {{ end }}

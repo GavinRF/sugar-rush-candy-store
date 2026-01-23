@@ -1,6 +1,27 @@
 {{ define "main" }}
 
-<h1>Nothing Here...</h1>
-<h3><a href="{{ "/" | relURL }}">Go Home</a></h3>
+<div class="bg-off-white pv5 ph3 tc">
+  <div class="mw6 center">
+    <div class="contact-form-card">
+      <h1 class="f1 primary mb3" style="font-size: 6rem; line-height: 1;">404</h1>
+      <h2 class="f3 b lh-title mb3">Oops! This page got lost in the candy jar.</h2>
+      <p class="mb4 grey-3">The page you're looking for doesn't exist or has been moved.</p>
+
+      <div class="flex flex-column flex-row-ns justify-center items-center">
+        <a href="/" class="btn raise mb3 mb0-ns mr0 mr3-ns" onclick="addExplosion(this, event)">Go Home</a>
+        <a href="/products" class="btn raise" onclick="addExplosion(this, event)">Browse Products</a>
+      </div>
+    </div>
+
+    <div class="mt4">
+      <p class="grey-3 f6">Looking for something specific?</p>
+      <ul class="list pl0 mt2">
+        <li class="dib mh2"><a href="/contact" class="link primary">Contact Us</a></li>
+        <li class="dib mh2"><a href="/post" class="link primary">Blog</a></li>
+        <li class="dib mh2"><a href="/values" class="link primary">Our Values</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 {{ end }}

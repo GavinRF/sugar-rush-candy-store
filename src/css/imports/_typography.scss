@@ -246,15 +246,14 @@ sup {
   }
 }
 
-        @media (max-width: 768) {
-          h1 {
-            font-size: 27vw !important;
-          }
-        }
-
 /* Kerned title - per-letter spacing control for "Sugar Rush" */
 h1.kerned-title > span {
   display: inline;
+}
+
+h1.kerned-title .word {
+  white-space: nowrap;
+  display: inline-block;
 }
 
 h1.kerned-title .letter {

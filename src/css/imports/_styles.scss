@@ -58,6 +58,13 @@ button.mobile-menu-container {
   position: relative;
 }
 
+/* Mobile background position adjustment */
+@media (max-width: 30em) {
+  .jumbotron.bg-left-mobile {
+    background-position: 85% 22%;
+  }
+}
+
 .jumbotron::before {
   content: '';
   position: absolute;
@@ -179,7 +186,7 @@ button.mobile-menu-container {
   background-repeat: repeat-x;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .cart-awning {
     top: 100px;
     height: 40px;
@@ -208,6 +215,12 @@ button.mobile-menu-container {
   }
 
     h1, h1::after, h1::before {
+    font-size: 3.45rem;
+  }
+}
+
+@media (max-width: 465px) {
+  h1, h1::after, h1::before {
     font-size: 2.5rem;
   }
 }
@@ -284,7 +297,7 @@ a.bg-light-blue {
 
 /* Testimonial cards */
 .testimonial-card {
-  padding: 2rem 2rem 1.5rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 16px;
   position: relative;
   box-shadow: 2px 1px 8px rgba(5, 5, 80, 0.2);
@@ -350,5 +363,48 @@ a.bg-light-blue {
   letter-spacing: 0.08em;
   color: var(--deep-pink);
   margin-bottom: 0.5rem;
+}
+
+/* Contact form card styling */
+.contact-form-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background-image: repeating-linear-gradient(-45deg, #ffb3d9 0px, #ffb3d9 6px, #fff 6px, #fff 12px, #a8d8ea 12px, #a8d8ea 18px, #fff 18px, #fff 24px, #b8f3d8 24px, #b8f3d8 30px, #fff 30px, #fff 36px, #ffb3d9 36px, #ffb3d9 42px, #fff 42px, #fff 48px);
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+
+  .info-card:hover {
+    transform: none;
+  }
+
+  .dustDef {
+    display: none !important;
+  }
 }
 

@@ -15,7 +15,8 @@ fieldset
 }
 
 input, textarea {
-  background-color: var(--grey-2);
+  background-color: #f8f9fa;
+  border: 2px solid var(--pastel-blue);
   border-radius: var(--border-radius);
   padding: 12px 16px 10px;
   font-size: var(--spacing-medium);
@@ -23,8 +24,9 @@ input, textarea {
   position: relative;
   transition: var(--hover-transition);
   z-index: 2;
-  :focus {
+  &:focus {
     background-color: var(--white);
+    border-color: var(--primary);
   }
   &:focus + label {
     opacity: 1;

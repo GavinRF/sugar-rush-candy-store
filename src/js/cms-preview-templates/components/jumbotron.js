@@ -6,11 +6,27 @@ export default class Jumbotron extends React.Component {
 
     const renderTitle = () => {
       if (kerned && title) {
+        const words = title.split(' ');
+        let globalIndex = 0;
         return (
           <span aria-hidden="true">
-            {title.split('').map((char, i) => (
-              <span key={i} className={`letter letter-${i}`} data-char={char}>{char}</span>
-            ))}
+            {words.map((word, wordIndex) => {
+              const spaceIndex = globalIndex;
+              if (wordIndex > 0) {
+                globalIndex += 1; // account for space
+              }
+              const wordStartIndex = globalIndex;
+              const letters = word.split('').map((char, i) => (
+                <span key={wordStartIndex + i} className={`letter letter-${wordStartIndex + i}`} data-char={char}>{char}</span>
+              ));
+              globalIndex += word.length;
+              return (
+                <React.Fragment key={wordIndex}>
+                  {wordIndex > 0 && <span className={`letter letter-${spaceIndex}`} data-char=" "> </span>}
+                  <span className="word">{letters}</span>
+                </React.Fragment>
+              );
+            })}
           </span>
         );
       }
