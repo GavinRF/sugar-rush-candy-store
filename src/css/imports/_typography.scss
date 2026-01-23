@@ -90,7 +90,8 @@ body {
 h2 {
   position: relative;
   display: inline-block;
-  padding-bottom: 1rem;
+  padding-bottom: .35rem;
+  isolation: isolate;
 }
 
 h2::after {
@@ -103,6 +104,17 @@ h2::after {
   height: 8px;
   background-image: repeating-linear-gradient(-45deg, #ffb3d9 0px, #ffb3d9 6px, #fff 6px, #fff 12px, #a8d8ea 12px, #a8d8ea 18px, #fff 18px, #fff 24px, #b8f3d8 24px, #b8f3d8 30px, #fff 30px, #fff 36px, #ffb3d9 36px, #ffb3d9 42px, #fff 42px, #fff 48px);
   border-radius: 4px;
+  z-index: -1;
+}
+
+/* Remove candy underline from blog post h2s */
+.cms h2::after {
+  content: none;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  padding-top: .5rem;
 }
 
 p {
