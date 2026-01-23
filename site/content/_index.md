@@ -24,7 +24,7 @@ info_cards:
         Sun: 11:00 am – 05:00 pm <br>
     - icon: streamline-plump:store-2
       heading: What We Offer
-      text: Hard-to-find candies • Nostalgic treats<br>Luxury truffles • Ice
+      text: Hard-to-find candies • Nostalgic&nbsp;treats<br>Luxury truffles • Ice
         cream<br>Novelty sweets & more!
 intro:
   heading: What we offer
