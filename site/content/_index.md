@@ -34,7 +34,7 @@ products:
     text: We carry an incredible selection of nostalgic candies from your childhood
       favorites to unique treats from around the world. From classic gummies and
       chocolates to hard-to-find retro sweets, we've got something to satisfy
-      every sweet tooth. Stop by or contact us to see what's in stock.
+      every sweet tooth.
     imageAlt: a loveable elephant offering a big hug
   - image: img/gumdrop-eating-gumdrop.png
     text: Looking for the perfect gift? We offer custom candy boxes and party favors
