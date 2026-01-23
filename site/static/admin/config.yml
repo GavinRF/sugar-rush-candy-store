@@ -119,6 +119,59 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Blurb, name: blurb, widget: text}
+      - file: "site/data/hours.json"
+        label: Store Hours
+        name: hours
+        fields:
+          - label: Monday
+            name: monday
+            widget: object
+            fields:
+              - {label: Closed, name: closed, widget: boolean, default: false}
+              - {label: Open, name: open, widget: string, required: false, hint: "e.g. 11:00 am"}
+              - {label: Close, name: close, widget: string, required: false, hint: "e.g. 7:00 pm"}
+          - label: Tuesday
+            name: tuesday
+            widget: object
+            fields:
+              - {label: Closed, name: closed, widget: boolean, default: false}
+              - {label: Open, name: open, widget: string, required: false, hint: "e.g. 11:00 am"}
+              - {label: Close, name: close, widget: string, required: false, hint: "e.g. 7:00 pm"}
+          - label: Wednesday
+            name: wednesday
+            widget: object
+            fields:
+              - {label: Closed, name: closed, widget: boolean, default: false}
+              - {label: Open, name: open, widget: string, required: false, hint: "e.g. 11:00 am"}
+              - {label: Close, name: close, widget: string, required: false, hint: "e.g. 7:00 pm"}
+          - label: Thursday
+            name: thursday
+            widget: object
+            fields:
+              - {label: Closed, name: closed, widget: boolean, default: false}
+              - {label: Open, name: open, widget: string, required: false, hint: "e.g. 11:00 am"}
+              - {label: Close, name: close, widget: string, required: false, hint: "e.g. 7:00 pm"}
+          - label: Friday
+            name: friday
+            widget: object
+            fields:
+              - {label: Closed, name: closed, widget: boolean, default: false}
+              - {label: Open, name: open, widget: string, required: false, hint: "e.g. 11:00 am"}
+              - {label: Close, name: close, widget: string, required: false, hint: "e.g. 7:00 pm"}
+          - label: Saturday
+            name: saturday
+            widget: object
+            fields:
+              - {label: Closed, name: closed, widget: boolean, default: false}
+              - {label: Open, name: open, widget: string, required: false, hint: "e.g. 11:00 am"}
+              - {label: Close, name: close, widget: string, required: false, hint: "e.g. 7:00 pm"}
+          - label: Sunday
+            name: sunday
+            widget: object
+            fields:
+              - {label: Closed, name: closed, widget: boolean, default: false}
+              - {label: Open, name: open, widget: string, required: false, hint: "e.g. 11:00 am"}
+              - {label: Close, name: close, widget: string, required: false, hint: "e.g. 7:00 pm"}
       - file: "site/hugo.toml"
         label: Hugo Config
         name: config

@@ -1,6 +1,202 @@
 // Check for reduced motion preference
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+        // Sticky navigation
+        function initStickyNav() {
+            const nav = document.querySelector('nav[data-nav]');
+            const jumbotron = document.querySelector('.jumbotron');
+            if (!nav || !jumbotron) return;
+
+            // Create spacer element to prevent content jump
+            const spacer = document.createElement('div');
+            spacer.className = 'nav-spacer';
+            spacer.style.height = nav.offsetHeight + 'px';
+            nav.parentNode.insertBefore(spacer, nav.nextSibling);
+
+            function handleScroll() {
+                const jumbotronBottom = jumbotron.offsetTop + jumbotron.offsetHeight;
+
+                if (window.scrollY > jumbotronBottom) {
+                    nav.classList.add('is-sticky');
+                    spacer.classList.add('is-active');
+                } else {
+                    nav.classList.remove('is-sticky');
+                    spacer.classList.remove('is-active');
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll(); // Check initial state
+        }
+
+        // Run sticky nav when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initStickyNav);
+        } else {
+            initStickyNav();
+        }
+
+        // Open Now indicator
+        function initOpenStatus() {
+            const statusEl = document.querySelector('[data-open-status]');
+            const hoursDataEl = document.getElementById('store-hours-data');
+
+            if (!statusEl) {
+                console.log('Open status: statusEl not found');
+                return;
+            }
+            if (!hoursDataEl) {
+                console.log('Open status: hoursDataEl not found');
+                return;
+            }
+
+            // Parse hours from embedded JSON
+            let hoursData;
+            try {
+                console.log('Raw textContent:', hoursDataEl.textContent);
+                console.log('Type:', typeof hoursDataEl.textContent);
+                hoursData = JSON.parse(hoursDataEl.textContent);
+                console.log('Parsed hours:', hoursData);
+                console.log('Parsed type:', typeof hoursData);
+                // If it's still a string, parse again (double-encoded)
+                if (typeof hoursData === 'string') {
+                    hoursData = JSON.parse(hoursData);
+                    console.log('Double-parsed hours:', hoursData);
+                }
+            } catch (e) {
+                console.error('Failed to parse hours JSON:', e);
+                return;
+            }
+
+            // Convert 12-hour format to 24-hour minutes
+            function parseTime(timeStr) {
+                if (!timeStr) return null;
+                const match = timeStr.match(/(\d+):(\d+)\s*(am|pm)/i);
+                if (!match) return null;
+                let hours = parseInt(match[1]);
+                const mins = parseInt(match[2]);
+                const period = match[3].toLowerCase();
+                if (period === 'pm' && hours !== 12) hours += 12;
+                if (period === 'am' && hours === 12) hours = 0;
+                return { hours, mins, formatted: `${String(hours).padStart(2, '0')}:${String(mins).padStart(2, '0')}` };
+            }
+
+            // Map day names to day numbers (0 = Sunday)
+            const dayMap = { sunday: 0, monday: 1, tuesday: 2, wednesday: 3, thursday: 4, friday: 5, saturday: 6 };
+
+            // Build hours object keyed by day number
+            const hours = {};
+            for (const [dayName, data] of Object.entries(hoursData)) {
+                const dayNum = dayMap[dayName];
+                console.log('Processing day:', dayName, 'dayNum:', dayNum, 'data:', data);
+                if (data.closed) {
+                    hours[dayNum] = null;
+                    console.log('  -> closed');
+                } else {
+                    const openTime = parseTime(data.open);
+                    const closeTime = parseTime(data.close);
+                    console.log('  -> openTime:', openTime, 'closeTime:', closeTime);
+                    if (openTime && closeTime) {
+                        hours[dayNum] = { open: openTime.formatted, close: closeTime.formatted };
+                    }
+                }
+            }
+
+            function getNextOpenTime(currentDay, currentMinutes) {
+                // Check if store opens later today
+                const todayHours = hours[currentDay];
+                if (todayHours) {
+                    const [openHour, openMin] = todayHours.open.split(':').map(Number);
+                    const openMinutes = openHour * 60 + openMin;
+                    if (currentMinutes < openMinutes) {
+                        return { minutes: openMinutes - currentMinutes, day: 'today' };
+                    }
+                }
+
+                // Find next open day
+                let daysAhead = 1;
+                for (let i = 1; i <= 7; i++) {
+                    const nextDay = (currentDay + i) % 7;
+                    if (hours[nextDay]) {
+                        const [openHour, openMin] = hours[nextDay].open.split(':').map(Number);
+                        const openMinutes = openHour * 60 + openMin;
+                        // Minutes until midnight + minutes into next open day
+                        const minutesUntilMidnight = (24 * 60) - currentMinutes;
+                        const totalMinutes = minutesUntilMidnight + ((i - 1) * 24 * 60) + openMinutes;
+                        return { minutes: totalMinutes, day: i === 1 ? 'tomorrow' : null };
+                    }
+                }
+                return null;
+            }
+
+            function formatTimeUntil(minutes) {
+                const hours = Math.floor(minutes / 60);
+                const mins = minutes % 60;
+
+                if (hours === 0) {
+                    return `Opens in ${mins}m`;
+                } else if (hours < 24) {
+                    return mins > 0 ? `Opens in ${hours}h ${mins}m` : `Opens in ${hours}h`;
+                } else {
+                    const days = Math.floor(hours / 24);
+                    const remainingHours = hours % 24;
+                    if (days === 1) {
+                        return remainingHours > 0 ? `Opens tomorrow` : `Opens tomorrow`;
+                    }
+                    return `Opens in ${days} days`;
+                }
+            }
+
+            function checkIfOpen() {
+                // Get current time in Pacific timezone
+                const now = new Date();
+                const pacificTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+                const day = pacificTime.getDay();
+                const currentMinutes = pacificTime.getHours() * 60 + pacificTime.getMinutes();
+
+                console.log('checkIfOpen - day:', day, 'currentMinutes:', currentMinutes, 'hours:', hours);
+
+                const todayHours = hours[day];
+
+                let isOpen = false;
+                if (todayHours) {
+                    const [openHour, openMin] = todayHours.open.split(':').map(Number);
+                    const [closeHour, closeMin] = todayHours.close.split(':').map(Number);
+                    const openMinutes = openHour * 60 + openMin;
+                    const closeMinutes = closeHour * 60 + closeMin;
+                    isOpen = currentMinutes >= openMinutes && currentMinutes < closeMinutes;
+                    console.log('Today hours:', todayHours, 'isOpen:', isOpen);
+                }
+
+                if (isOpen) {
+                    console.log('Setting Open Now');
+                    statusEl.textContent = 'Open Now';
+                    statusEl.className = 'open-status is-open';
+                } else {
+                    const nextOpen = getNextOpenTime(day, currentMinutes);
+                    console.log('nextOpen:', nextOpen);
+                    if (nextOpen) {
+                        const text = formatTimeUntil(nextOpen.minutes);
+                        console.log('Setting text:', text);
+                        statusEl.textContent = text;
+                        statusEl.className = 'open-status is-closed';
+                    }
+                }
+            }
+
+            console.log('Built hours object:', hours);
+            checkIfOpen();
+            // Update every minute
+            setInterval(checkIfOpen, 60000);
+        }
+
+        // Run open status when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initOpenStatus);
+        } else {
+            initOpenStatus();
+        }
+
         // Exploding candy button effect
         window.addExplosion = function(button, event) {
             // Skip animation if user prefers reduced motion

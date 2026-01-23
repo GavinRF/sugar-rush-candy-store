@@ -6,4 +6,5 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
 images = ["img/gumdrop-cottoncandy.png"]
+description = "Sugar Rush Candy Store in Bothell, WA offers hard-to-find candies, nostalgic treats, luxury truffles, and handcrafted ice cream."
 googleAnalyticsID = "G-LWGGGFTSNW"

@@ -1,0 +1,14 @@
+<dl class="store-hours">
+  {{- $days := slice "monday" "tuesday" "wednesday" "thursday" "friday" "saturday" "sunday" -}}
+  {{- $dayLabels := dict "monday" "Mon" "tuesday" "Tue" "wednesday" "Wed" "thursday" "Thu" "friday" "Fri" "saturday" "Sat" "sunday" "Sun" -}}
+  {{- range $days -}}
+    {{- $day := index site.Data.hours . -}}
+    <div class="hours-row">
+      <dt>{{ index $dayLabels . }}</dt>
+      <dd>{{ if $day.closed }}Closed{{ else }}{{ $day.open }} – {{ $day.close }}{{ end }}</dd>
+    </div>
+  {{- end -}}
+</dl>
+
+{{/* Output hours as JSON for JavaScript */}}
+<script id="store-hours-data" type="application/json">{{ site.Data.hours | jsonify }}</script>

@@ -1,10 +1,14 @@
 <section class="info-section">
     <div class="cards-grid mw8 center ph3">
         {{ range .cards }}
-        <div class="info-card">
-            <div class="card-icon"><iconify-icon {{ printf "icon=%q" .icon | safeHTMLAttr }}></iconify-icon></div>
+        <div class="info-card"{{ if eq .heading "Store Hours" }} data-store-hours{{ end }}>
+            <div class="card-icon"><iconify-icon {{ printf "icon=%q" .icon | safeHTMLAttr }}></iconify-icon>{{ if eq .heading "Store Hours" }}<span class="open-status" data-open-status></span>{{ end }}</div>
             <h3>{{ .heading }}</h3>
-            <p>{{ .text | safeHTML }}</p>
+            {{ if eq .heading "Store Hours" }}
+                {{ partial "store-hours" $ }}
+            {{ else }}
+                <p>{{ .text | safeHTML }}</p>
+            {{ end }}
         </div>
         {{ end }}
     </div>
