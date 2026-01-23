@@ -382,6 +382,12 @@ mark {
   color: var(--text-light)
 }
 
+.hours-row.is-today dt,
+.hours-row.is-today dd {
+  font-weight: 600;
+  color: var(--primary);
+}
+
 /* Blog cards */
 a.bg-light-blue {
   box-shadow: 2px 1px 8px rgba(5, 5, 80, 0.2);

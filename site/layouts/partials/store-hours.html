@@ -1,10 +1,10 @@
 <dl class="store-hours">
-  {{- $days := slice "monday" "tuesday" "wednesday" "thursday" "friday" "saturday" "sunday" -}}
+  {{- $days := slice "sunday" "monday" "tuesday" "wednesday" "thursday" "friday" "saturday" -}}
   {{- $dayLabels := dict "monday" "Mon" "tuesday" "Tue" "wednesday" "Wed" "thursday" "Thu" "friday" "Fri" "saturday" "Sat" "sunday" "Sun" -}}
-  {{- range $days -}}
-    {{- $day := index site.Data.hours . -}}
-    <div class="hours-row">
-      <dt>{{ index $dayLabels . }}</dt>
+  {{- range $i, $dayName := $days -}}
+    {{- $day := index site.Data.hours $dayName -}}
+    <div class="hours-row" data-day="{{ $i }}">
+      <dt>{{ index $dayLabels $dayName }}</dt>
       <dd>{{ if $day.closed }}Closed{{ else }}{{ $day.open }} – {{ $day.close }}{{ end }}</dd>
     </div>
   {{- end -}}

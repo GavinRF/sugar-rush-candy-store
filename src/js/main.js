@@ -41,30 +41,17 @@
             const statusEl = document.querySelector('[data-open-status]');
             const hoursDataEl = document.getElementById('store-hours-data');
 
-            if (!statusEl) {
-                console.log('Open status: statusEl not found');
-                return;
-            }
-            if (!hoursDataEl) {
-                console.log('Open status: hoursDataEl not found');
-                return;
-            }
+            if (!statusEl || !hoursDataEl) return;
 
             // Parse hours from embedded JSON
             let hoursData;
             try {
-                console.log('Raw textContent:', hoursDataEl.textContent);
-                console.log('Type:', typeof hoursDataEl.textContent);
                 hoursData = JSON.parse(hoursDataEl.textContent);
-                console.log('Parsed hours:', hoursData);
-                console.log('Parsed type:', typeof hoursData);
-                // If it's still a string, parse again (double-encoded)
+                // Handle double-encoded JSON from Hugo
                 if (typeof hoursData === 'string') {
                     hoursData = JSON.parse(hoursData);
-                    console.log('Double-parsed hours:', hoursData);
                 }
             } catch (e) {
-                console.error('Failed to parse hours JSON:', e);
                 return;
             }
 
@@ -88,14 +75,11 @@
             const hours = {};
             for (const [dayName, data] of Object.entries(hoursData)) {
                 const dayNum = dayMap[dayName];
-                console.log('Processing day:', dayName, 'dayNum:', dayNum, 'data:', data);
                 if (data.closed) {
                     hours[dayNum] = null;
-                    console.log('  -> closed');
                 } else {
                     const openTime = parseTime(data.open);
                     const closeTime = parseTime(data.close);
-                    console.log('  -> openTime:', openTime, 'closeTime:', closeTime);
                     if (openTime && closeTime) {
                         hours[dayNum] = { open: openTime.formatted, close: closeTime.formatted };
                     }
@@ -154,8 +138,6 @@
                 const day = pacificTime.getDay();
                 const currentMinutes = pacificTime.getHours() * 60 + pacificTime.getMinutes();
 
-                console.log('checkIfOpen - day:', day, 'currentMinutes:', currentMinutes, 'hours:', hours);
-
                 const todayHours = hours[day];
 
                 let isOpen = false;
@@ -165,26 +147,27 @@
                     const openMinutes = openHour * 60 + openMin;
                     const closeMinutes = closeHour * 60 + closeMin;
                     isOpen = currentMinutes >= openMinutes && currentMinutes < closeMinutes;
-                    console.log('Today hours:', todayHours, 'isOpen:', isOpen);
                 }
 
                 if (isOpen) {
-                    console.log('Setting Open Now');
                     statusEl.textContent = 'Open Now';
                     statusEl.className = 'open-status is-open';
                 } else {
                     const nextOpen = getNextOpenTime(day, currentMinutes);
-                    console.log('nextOpen:', nextOpen);
                     if (nextOpen) {
-                        const text = formatTimeUntil(nextOpen.minutes);
-                        console.log('Setting text:', text);
-                        statusEl.textContent = text;
+                        statusEl.textContent = formatTimeUntil(nextOpen.minutes);
                         statusEl.className = 'open-status is-closed';
                     }
                 }
             }
 
-            console.log('Built hours object:', hours);
+            // Highlight current day
+            const pacificNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+            const todayRow = document.querySelector(`[data-day="${pacificNow.getDay()}"]`);
+            if (todayRow) {
+                todayRow.classList.add('is-today');
+            }
+
             checkIfOpen();
             // Update every minute
             setInterval(checkIfOpen, 60000);

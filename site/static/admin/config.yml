@@ -41,7 +41,7 @@ collections: # A list of collections the CMS should be able to edit
                 fields:
                   - {label: "Icon", name: "icon", widget: "string", hint: "Iconify icon name (e.g. solar:pin-outline)"}
                   - {label: "Heading", name: "heading", widget: "string"}
-                  - {label: "Text", name: "text", widget: "text", hint: "HTML allowed for formatting (use <br> for line breaks, <strong> for bold)"}
+                  - {label: "Text", name: "text", widget: "text", hint: "HTML allowed for formatting. Note: Store Hours are managed separately in Site Settings > Store Hours."}
           - {label: "Intro", name: intro, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
@@ -122,6 +122,7 @@ collections: # A list of collections the CMS should be able to edit
       - file: "site/data/hours.json"
         label: Store Hours
         name: hours
+        description: "Edit your store's opening hours here. These appear on the home page and power the 'Open Now' indicator. Use format like '11:00 am' or '7:00 pm'."
         fields:
           - label: Monday
             name: monday

@@ -1,0 +1,378 @@
+{{ define "main" }}
+
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+
+<div class="mw8 center ph3 pv5">
+
+  <!-- COLORS SECTION -->
+  <section class="mb5">
+    <h2 class="f2 mb4">Colors</h2>
+
+    <h3 class="f4 mb3 grey-3">Primary Brand Color</h3>
+    <div class="flex flex-wrap mb4" style="gap: 1rem;">
+      <div class="style-swatch">
+        <div class="swatch-color bg-primary"></div>
+        <div class="swatch-info">
+          <strong>Primary Pink</strong>
+          <code>#F40088</code>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="f4 mb3 grey-3">Pastel Palette</h3>
+    <div class="flex flex-wrap mb4" style="gap: 1rem;">
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--pastel-pink);"></div>
+        <div class="swatch-info">
+          <strong>Pastel Pink</strong>
+          <code>#ffb3d9</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--pastel-blue);"></div>
+        <div class="swatch-info">
+          <strong>Pastel Blue</strong>
+          <code>#a8d8ea</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--mint);"></div>
+        <div class="swatch-info">
+          <strong>Mint</strong>
+          <code>#b8f3d8</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--cream);"></div>
+        <div class="swatch-info">
+          <strong>Cream</strong>
+          <code>#fff9e6</code>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="f4 mb3 grey-3">Accent Colors</h3>
+    <div class="flex flex-wrap mb4" style="gap: 1rem;">
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--deep-pink);"></div>
+        <div class="swatch-info">
+          <strong>Deep Pink</strong>
+          <code>#ff6baa</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--dark-pink);"></div>
+        <div class="swatch-info">
+          <strong>Dark Pink</strong>
+          <code>#ab2b62</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--deep-blue);"></div>
+        <div class="swatch-info">
+          <strong>Deep Blue</strong>
+          <code>#6ba3bf</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--highlight);"></div>
+        <div class="swatch-info">
+          <strong>Highlight</strong>
+          <code>rgba(254, 213, 198, 1)</code>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="f4 mb3 grey-3">Light Backgrounds</h3>
+    <div class="flex flex-wrap mb4" style="gap: 1rem;">
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--light-pink); border: 1px solid #eee;"></div>
+        <div class="swatch-info">
+          <strong>Light Pink</strong>
+          <code>#ffebf5</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--light-blue); border: 1px solid #eee;"></div>
+        <div class="swatch-info">
+          <strong>Light Blue</strong>
+          <code>#f0fcff</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--off-white); border: 1px solid #eee;"></div>
+        <div class="swatch-info">
+          <strong>Off White</strong>
+          <code>#fffdfC</code>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="f4 mb3 grey-3">Neutral Colors</h3>
+    <div class="flex flex-wrap mb4" style="gap: 1rem;">
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--white); border: 1px solid #eee;"></div>
+        <div class="swatch-info">
+          <strong>White</strong>
+          <code>#ffffff</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--grey-1); border: 1px solid #eee;"></div>
+        <div class="swatch-info">
+          <strong>Grey 1</strong>
+          <code>#f5f3f2</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--grey-2);"></div>
+        <div class="swatch-info">
+          <strong>Grey 2</strong>
+          <code>#ebe7e6</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--grey-3);"></div>
+        <div class="swatch-info">
+          <strong>Grey 3</strong>
+          <code>#595756</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--grey-4);"></div>
+        <div class="swatch-info">
+          <strong>Grey 4</strong>
+          <code>#424040</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--black);"></div>
+        <div class="swatch-info">
+          <strong>Black</strong>
+          <code>#2b2523</code>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="f4 mb3 grey-3">Footer / Dark Theme</h3>
+    <div class="flex flex-wrap mb4" style="gap: 1rem;">
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--footer-bg);"></div>
+        <div class="swatch-info">
+          <strong>Footer Navy</strong>
+          <code>#000762</code>
+        </div>
+      </div>
+      <div class="style-swatch">
+        <div class="swatch-color" style="background: var(--navy-text);"></div>
+        <div class="swatch-info">
+          <strong>Navy Text</strong>
+          <code>#000551</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPOGRAPHY SECTION -->
+  <section class="mb5">
+    <h2 class="f2 mb4">Typography</h2>
+
+    <h3 class="f4 mb3 grey-3">Font Families</h3>
+    <div class="bg-grey-1 pa4 br3 mb4">
+      <div class="mb4">
+        <p class="f6 grey-3 mb2 ttu tracked">Heading Font</p>
+        <p style="font-family: 'Fredoka', cursive; font-size: 2rem; font-weight: 600;">Fredoka</p>
+        <code class="f6">font-family: 'Fredoka', cursive;</code>
+      </div>
+      <div>
+        <p class="f6 grey-3 mb2 ttu tracked">Body Font</p>
+        <p style="font-family: 'Asap', sans-serif; font-size: 1.25rem;">Asap - The quick brown fox jumps over the lazy dog.</p>
+        <code class="f6">font-family: 'Asap', sans-serif;</code>
+      </div>
+    </div>
+
+    <h3 class="f4 mb3 grey-3">Headings</h3>
+    <div class="bg-white pa4 br3 mb4" style="border: 1px solid var(--grey-2);">
+      <h1 class="mb4">H1 Heading Style</h1>
+      <h2 class="mb4">H2 Heading Style</h2>
+      <h3 class="mb3" style="font-family: 'Fredoka', cursive; font-size: 1.8rem; color: var(--primary);">H3 Card Heading Style</h3>
+      <p class="grey-3 f6">Note: H1 uses an animated gradient effect. H2 has a candy-striped underline.</p>
+    </div>
+
+    <h3 class="f4 mb3 grey-3">Font Sizes</h3>
+    <div class="bg-grey-1 pa4 br3 mb4">
+      <p class="f1 mb3">f1 - 3rem (48px)</p>
+      <p class="f2 mb3">f2 - 2.25rem (36px)</p>
+      <p class="f3 mb3">f3 - 1.5rem (24px)</p>
+      <p class="f4 mb3">f4 - 1.25rem (20px)</p>
+      <p class="f5 mb3">f5 - 1rem (16px)</p>
+      <p class="f6 mb2">f6 - 0.875rem (14px)</p>
+    </div>
+
+    <h3 class="f4 mb3 grey-3">Body Text</h3>
+    <div class="bg-white pa4 br3 mb4" style="border: 1px solid var(--grey-2);">
+      <p class="mb3">Regular body text uses Asap at 18-22px (responsive). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p class="mb3"><strong>Bold text for emphasis.</strong> Use sparingly for key points.</p>
+      <p><em>Italic text for special terms or quotes.</em></p>
+    </div>
+  </section>
+
+  <!-- BUTTONS SECTION -->
+  <section class="mb5">
+    <h2 class="f2 mb4">Buttons</h2>
+
+    <div class="bg-grey-1 pa4 br3 mb4">
+      <h3 class="f4 mb3 grey-3">Primary Button</h3>
+      <a href="#" class="btn mb3">Primary Button</a>
+      <div class="mt3">
+        <code class="f6">class="btn"</code>
+      </div>
+    </div>
+
+    <div class="bg-white pa4 br3 mb4" style="border: 1px solid var(--grey-2);">
+      <h3 class="f4 mb3 grey-3">Button Specifications</h3>
+      <ul class="pl4">
+        <li class="mb2">Background: White with 2px inset border (Primary Pink)</li>
+        <li class="mb2">Text color: Primary Pink (#F40088)</li>
+        <li class="mb2">Padding: 12px 16px 10px</li>
+        <li class="mb2">Border radius: 0.25rem</li>
+        <li class="mb2">Hover: Scale 1.05</li>
+        <li>Active: Scale 0.95</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COMPONENTS SECTION -->
+  <section class="mb5">
+    <h2 class="f2 mb4">Components</h2>
+
+    <h3 class="f4 mb3 grey-3">Info Cards</h3>
+    <div class="cards-grid mb4" style="max-width: 700px;">
+      <div class="info-card">
+        <iconify-icon icon="mdi:candy" class="info-card-icon"></iconify-icon>
+        <h3>Card Title</h3>
+        <p>Card description text goes here. Cards have a gradient top border and hover lift effect.</p>
+      </div>
+      <div class="info-card">
+        <iconify-icon icon="mdi:ice-cream" class="info-card-icon"></iconify-icon>
+        <h3>Another Card</h3>
+        <p>Each card includes an icon, heading, and description text.</p>
+      </div>
+    </div>
+
+    <h3 class="f4 mb3 grey-3">Status Badges</h3>
+    <div class="bg-grey-1 pa4 br3 mb4">
+      <span class="open-status is-open mr3">Open Now</span>
+      <span class="open-status is-closed">Closed</span>
+      <div class="mt3">
+        <code class="f6 db mb2">class="open-status is-open"</code>
+        <code class="f6 db">class="open-status is-closed"</code>
+      </div>
+    </div>
+
+    <h3 class="f4 mb3 grey-3">Testimonial Card</h3>
+    <div class="testimonial-card mb4" style="max-width: 500px;">
+      <p class="testimonial-text">"This is an example testimonial quote. The card has a large decorative quote mark and a gradient bottom bar."</p>
+      <p class="testimonial-author">- Customer Name</p>
+    </div>
+  </section>
+
+  <!-- SPACING SECTION -->
+  <section class="mb5">
+    <h2 class="f2 mb4">Spacing Scale</h2>
+
+    <div class="bg-grey-1 pa4 br3 mb4">
+      <div class="flex items-center mb3">
+        <div class="bg-primary br2 mr3" style="width: 0; height: 20px;"></div>
+        <code>0 - 0</code>
+      </div>
+      <div class="flex items-center mb3">
+        <div class="bg-primary br2 mr3" style="width: 4px; height: 20px;"></div>
+        <code>1 - 0.25rem (4px)</code>
+      </div>
+      <div class="flex items-center mb3">
+        <div class="bg-primary br2 mr3" style="width: 8px; height: 20px;"></div>
+        <code>2 - 0.5rem (8px)</code>
+      </div>
+      <div class="flex items-center mb3">
+        <div class="bg-primary br2 mr3" style="width: 16px; height: 20px;"></div>
+        <code>3 - 1rem (16px)</code>
+      </div>
+      <div class="flex items-center mb3">
+        <div class="bg-primary br2 mr3" style="width: 32px; height: 20px;"></div>
+        <code>4 - 2rem (32px)</code>
+      </div>
+      <div class="flex items-center mb3">
+        <div class="bg-primary br2 mr3" style="width: 64px; height: 20px;"></div>
+        <code>5 - 4rem (64px)</code>
+      </div>
+      <div class="flex items-center mb3">
+        <div class="bg-primary br2 mr3" style="width: 128px; height: 20px;"></div>
+        <code>6 - 8rem (128px)</code>
+      </div>
+      <div class="flex items-center">
+        <div class="bg-primary br2 mr3" style="width: 200px; height: 20px;"></div>
+        <code>7 - 16rem (256px)</code>
+      </div>
+    </div>
+
+    <div class="bg-white pa4 br3" style="border: 1px solid var(--grey-2);">
+      <h3 class="f4 mb3 grey-3">Usage Classes</h3>
+      <p class="mb2"><code>pa0-pa7</code> - Padding all sides</p>
+      <p class="mb2"><code>ph0-ph7</code> - Padding horizontal</p>
+      <p class="mb2"><code>pv0-pv7</code> - Padding vertical</p>
+      <p class="mb2"><code>ma0-ma7</code> - Margin all sides</p>
+      <p class="mb2"><code>mh0-mh7</code> - Margin horizontal</p>
+      <p><code>mv0-mv7</code> - Margin vertical</p>
+    </div>
+  </section>
+
+  <!-- BREAKPOINTS SECTION -->
+  <section class="mb5">
+    <h2 class="f2 mb4">Responsive Breakpoints</h2>
+
+    <div class="bg-grey-1 pa4 br3">
+      <div class="mb3 pb3" style="border-bottom: 1px solid var(--grey-2);">
+        <code class="f5 db mb2">-ns (not small)</code>
+        <p class="grey-3">min-width: 40em (640px)</p>
+      </div>
+      <div class="mb3 pb3" style="border-bottom: 1px solid var(--grey-2);">
+        <code class="f5 db mb2">-m (medium)</code>
+        <p class="grey-3">min-width: 50em (800px)</p>
+      </div>
+      <div>
+        <code class="f5 db mb2">-l (large)</code>
+        <p class="grey-3">min-width: 60em (960px)</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<style>
+  .style-swatch {
+    width: 150px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .swatch-color {
+    height: 80px;
+    width: 100%;
+  }
+  .swatch-info {
+    padding: 12px;
+  }
+  .swatch-info strong {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+  }
+  .swatch-info code {
+    font-size: 0.75rem;
+    color: var(--grey-3);
+  }
+</style>
+
+{{ end }}
