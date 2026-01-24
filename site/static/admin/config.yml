@@ -78,6 +78,7 @@ collections: # A list of collections the CMS should be able to edit
           - label: Contact Entries
             name: contact_entries
             widget: list
+            hint: "Note: Working hours are managed in Site Settings > Store Hours."
             fields:
               - label: Heading
                 name: heading

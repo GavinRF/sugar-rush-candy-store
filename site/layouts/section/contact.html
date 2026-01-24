@@ -13,7 +13,11 @@
 	        	{{ range .Params.contact_entries }}
 				<div class="w-50-ns mb3 mb0-ns">
 					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
-					<div class="pre-line">{{ .text | safeHTML }}</div>
+					{{ if eq .heading "Working hours" }}
+						{{ partial "store-hours" $ }}
+					{{ else }}
+						<div class="pre-line">{{ .text | safeHTML }}</div>
+					{{ end }}
 				</div>
 			{{ end }}
 		</div>
