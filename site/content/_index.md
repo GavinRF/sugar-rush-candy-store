@@ -61,12 +61,14 @@ story:
   imageAlt: Gumdrop the elephant sits on a cloud of pink and blue cotton candy,
     holding their tummy and grinning ear to giant ear
 testimonials:
-  - quote: The first time I walked into Sugar Rush, I felt like a kid again. They
-      had candies I hadn't seen since the 80s!
-    author: Elisabeth K.
-    image: img/android-chrome-512x512.png
-    imageAlt: test image
-  - quote: My kids love picking out treats and I love the nostalgic selection. Sugar
-      Rush is our new favorite weekend stop!
-    author: Philipp T.
+  - quote: A lovely little hidden gem featuring a wide selection of candies both
+      familiar and exotic. I got spicy watermelon popcorn on a whim, thinking it
+      would fun but probably disgusting and oh my goodness, it was amazing!!!
+      And don't miss out on the bulk wall, lots of goodies in there, too! Will
+      definitely be back for seconds.
+    author: Lindy B.
+  - quote: Cute little candy shop with all sorts of different types of candy. I come
+      here every week to try something new from this place and I always leave
+      satisfied. Try the violet crumble, its delicious
+    author: Dorin G.
 ---
