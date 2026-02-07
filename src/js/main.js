@@ -346,3 +346,76 @@
         } else {
             initSparkles();
         }
+
+        // Holiday Countdown
+        function initHolidayCountdown() {
+            try {
+                const countdownContainer = document.querySelector('[data-holiday-countdown]');
+                console.log('CC found:', !!countdownContainer);
+                if (!countdownContainer) return;
+
+                const countdownTimer = document.getElementById('countdown-timer');
+                console.log('CT found:', !!countdownTimer);
+                if (!countdownTimer) return;
+
+                const holidayMessage = document.getElementById('holiday-message');
+                
+                const targetDateStr = countdownTimer.getAttribute('data-countdown-target');
+                console.log('TDS:', targetDateStr);
+                
+                if (!targetDateStr) return;
+                
+                const dateParts = targetDateStr.split('-');
+                if (dateParts.length !== 3) {
+                    console.error('Bad date:', targetDateStr);
+                    return;
+                }
+                
+                const year = parseInt(dateParts[0], 10);
+                const month = parseInt(dateParts[1], 10) - 1;
+                const day = parseInt(dateParts[2], 10);
+                
+                const targetDate = new Date(year, month, day, 23, 59, 59).getTime();
+                const now = new Date().getTime();
+                
+                console.log('Target ms:', targetDate, 'Now ms:', now, 'Diff:', targetDate - now);
+
+                function updateCountdown() {
+                    const currentNow = new Date().getTime();
+                    const distance = targetDate - currentNow;
+
+                    if (distance <= 0) {
+                        if (countdownTimer) countdownTimer.style.display = 'none';
+                        if (holidayMessage) holidayMessage.style.display = 'block';
+                        return;
+                    }
+
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    const daysEl = countdownTimer ? countdownTimer.querySelector('[data-days]') : null;
+                    const hoursEl = countdownTimer ? countdownTimer.querySelector('[data-hours]') : null;
+                    const minutesEl = countdownTimer ? countdownTimer.querySelector('[data-minutes]') : null;
+                    const secondsEl = countdownTimer ? countdownTimer.querySelector('[data-seconds]') : null;
+
+                    if (daysEl) daysEl.textContent = String(Math.max(0, days)).padStart(2, '0');
+                    if (hoursEl) hoursEl.textContent = String(Math.max(0, hours)).padStart(2, '0');
+                    if (minutesEl) minutesEl.textContent = String(Math.max(0, minutes)).padStart(2, '0');
+                    if (secondsEl) secondsEl.textContent = String(Math.max(0, seconds)).padStart(2, '0');
+                }
+
+                updateCountdown();
+                setInterval(updateCountdown, 1000);
+            } catch (error) {
+                console.error('Countdown error:', error);
+            }
+        }
+
+        // Run countdown when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initHolidayCountdown);
+        } else {
+            initHolidayCountdown();
+        }

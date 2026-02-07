@@ -6,6 +6,10 @@
 
 {{ partial "info-cards" .Params.info_cards }}
 
+{{ partial "valentines-countdown" . }}
+
+
+
 {{ partial "2-up" .Params }}
 
 {{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "image" .Params.values.image "buttonText" "Read more" "buttonLink" "/values") }}

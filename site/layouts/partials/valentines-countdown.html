@@ -1,0 +1,30 @@
+{{/* Holiday Countdown */}}
+{{ if and .Params.countdown.enabled .Params.countdown.date }}
+<div class="valentines-countdown" data-holiday-countdown>
+  <div class="ph3 mw7 center text-center">
+    <h2 class="f3 b lh-title mb2">{{ .Params.countdown.title | default "Holiday is Coming!" }}</h2>
+    {{ if .Params.countdown.description }}
+    <p class="f5 mb4">{{ .Params.countdown.description }}</p>
+    {{ end }}
+    <div id="countdown-timer" class="flex-ns flex-wrap justify-center items-center gap3" data-countdown-target="{{ .Params.countdown.date }}">
+      <div class="countdown-item">
+        <span class="countdown-number db" data-days>00</span>
+        <span class="countdown-label db">Days</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number db" data-hours>00</span>
+        <span class="countdown-label db">Hours</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number db" data-minutes>00</span>
+        <span class="countdown-label db">Minutes</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number db" data-seconds>00</span>
+        <span class="countdown-label db">Seconds</span>
+      </div>
+    </div>
+    <p id="holiday-message" class="f6 mt3" style="display: none;">{{ .Params.countdown.message | default "Happy Holiday! ❤️" }}</p>
+  </div>
+</div>
+{{ end }}
