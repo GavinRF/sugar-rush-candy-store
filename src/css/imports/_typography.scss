@@ -260,6 +260,19 @@ h1.kerned-title .letter {
   display: inline-block;
   position: relative;
   white-space: pre;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--deep-pink) 0px,
+    var(--deep-pink) 10px,
+    var(--deep-blue) 10px,
+    var(--deep-blue) 20px,
+    var(--pastel-pink) 20px,
+    var(--pastel-pink) 30px
+  );
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Disable h1 pseudo-elements for kerned title (handled per-letter instead) */
@@ -274,8 +287,9 @@ h1.kerned-title .letter::before {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   background: linear-gradient(165deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.1));
+  background-size: 100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -288,8 +302,9 @@ h1.kerned-title .letter::after {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -2;
+  z-index: 0;
   background: linear-gradient(185deg, rgba(134, 2, 157, 0), rgba(216, 29, 237, 0.49));
+  background-size: 100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -313,6 +328,7 @@ h1.kerned-title .letter-9 { margin-right: 0; }      /* h */
 h1.kerned-title .letter-1,
 h1.kerned-title .letter-4 { /* u - simple gradient */
   background: linear-gradient(180deg, var(--pastel-pink) 0%, var(--deep-pink) 100%);
+  background-size: 100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -327,7 +343,7 @@ h1.kerned-title .letter-6 { /* R */
     radial-gradient(circle at 25% 75%, var(--pastel-blue) 8%, transparent 9%),
     radial-gradient(circle at 75% 75%, var(--pastel-pink) 11%, transparent 12%),
     var(--deep-pink);
-  background-size: 20px 20px;
+  background-size: 20px 20px, 20px 20px, 20px 20px, 20px 20px, 100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -345,6 +361,7 @@ h1.kerned-title .letter-8 { /* s - alternate candy stripe */
     var(--white) 30px,
     var(--white) 32px
   );
+  background-size: 100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
