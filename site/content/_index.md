@@ -30,10 +30,10 @@ intro:
   heading: What we offer
   text: " "
 countdown:
-  enabled: true
-  title: "💕 Valentine's Day is Coming! 💕"
-  description: "Show your love with our special Valentine's treats!"
-  date: "2026-02-14"
+  enabled: false
+  title: 💕 Valentine's Day is Coming! 💕
+  description: Show your love with our special Valentine's treats!
+  date: 2026-02-14
 products:
   - image: img/gumdrop.png
     text: We carry an incredible selection of nostalgic candies from your childhood
