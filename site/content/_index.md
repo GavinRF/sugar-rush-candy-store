@@ -4,7 +4,7 @@ subtitle: candy store
 image: img/gumdrop-pop.png
 blurb:
   heading: Your spot in Bothell for nostalgic candy
-  text: Join Gumdrop the elovephant for an out of this world candy filled adventure
+  text: Join Gumdrop the elephant for an out of this world candy filled adventure
   image: img/gumdrop-yes-you-candy.png
 info_cards:
   cards:
